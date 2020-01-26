@@ -1,10 +1,19 @@
 import React from 'react';
-import { ThemeProvider } from 'theme-ui';
+import { ThemeProvider, Flex, Box } from 'theme-ui';
 import theme from '../theme/theme';
+import Header from '../components/header';
+import Content from '../components/content';
 
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
-    <h1>Visual Guide To SVG Matrix Function</h1>
+    <Box sx={{
+      position: 'relative'
+    }}>
+      <Header />
+      <Content>
+        Content goes here
+      </Content>
+    </Box>
   </ThemeProvider>
 );
 
