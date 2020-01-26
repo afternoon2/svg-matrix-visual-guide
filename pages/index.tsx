@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, Flex, Box } from 'theme-ui';
+import { ThemeProvider, Box } from 'theme-ui';
 import theme from '../theme/theme';
 import Header from '../components/header';
 import Content from '../components/content';
@@ -7,8 +7,9 @@ import Content from '../components/content';
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
     <Box sx={{
-      position: 'relative'
-    }}>
+      position: 'relative',
+    }}
+    >
       <Header />
       <Content>
         Content goes here
