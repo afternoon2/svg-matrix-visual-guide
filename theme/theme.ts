@@ -5,4 +5,7 @@ export default {
   styles: {
     ...future.styles,
   },
+  breakpoints: [
+    '768px', '1680px', '1920px',
+  ]
 };
