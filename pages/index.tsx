@@ -1,10 +1,9 @@
 import React from 'react';
 import {
-  ThemeProvider, Box, Grid, Flex,
+  ThemeProvider, Box, Grid,
 } from 'theme-ui';
 import theme from '../theme/theme';
 import Header from '../components/header';
-import Content from '../components/content';
 import Modifiers from '../components/modifiers';
 import Equation from '../components/equation';
 import MatrixState from '../components/states/matrix';
@@ -12,7 +11,6 @@ import MatrixState from '../components/states/matrix';
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
     <MatrixState>
-
       <Box
         sx={{
           position: 'relative',
@@ -20,7 +18,7 @@ const App: React.FC = () => (
       >
         <Header />
         <Grid
-          bg="muted"
+          bg="background"
           columns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(2, 2fr)']}
           p={3}
           sx={{
@@ -32,14 +30,14 @@ const App: React.FC = () => (
             gridTemplateRows: ['1fr 1fr 3fr 1fr', '1fr 4fr 1fr', 'repeat(3, 1fr)'],
           }}
         >
-          <Box p={3} bg="pink" sx={{ gridArea: ['1 / 1 / 2 / 3', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2'] }}>
+          <Box p={0} bg="background" sx={{ gridArea: ['1 / 1 / 2 / 3', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2'] }}>
             <Equation />
           </Box>
-          <Box p={3} bg="pink" sx={{ gridArea: ['3 / 1 / 4 / 3', '2 / 1 / 3 / 3', '1 / 2 / 3 / 3'] }}>Artboard</Box>
-          <Box p={3} bg="pink" sx={{ gridArea: ['2 / 1 / 3 / 3', '1 / 2 / 2 / 3', '2 / 1 / 4 / 2'] }}>
+          <Box bg="background" sx={{ gridArea: ['3 / 1 / 4 / 3', '2 / 1 / 3 / 3', '1 / 2 / 3 / 3'] }}>Artboard</Box>
+          <Box bg="background" sx={{ gridArea: ['2 / 1 / 3 / 3', '1 / 2 / 2 / 3', '2 / 1 / 4 / 2'] }}>
             <Modifiers />
           </Box>
-          <Box p={3} bg="pink" sx={{ gridArea: ['4 / 1 / 5 / 3', '3 / 1 / 4 / 3', '3 / 2 / 4 / 3'] }}>Addons</Box>
+          <Box bg="background" sx={{ gridArea: ['4 / 1 / 5 / 3', '3 / 1 / 4 / 3', '3 / 2 / 4 / 3'] }}>Addons</Box>
         </Grid>
       </Box>
     </MatrixState>

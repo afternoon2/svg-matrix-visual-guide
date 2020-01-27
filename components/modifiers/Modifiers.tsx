@@ -1,13 +1,10 @@
 import React from 'react';
-import { Heading } from 'theme-ui';
+import { Box } from 'theme-ui';
+import FieldGroup from '../common/fieldgroup';
 
 const Modifiers: React.FC = () => {
   return (
-    <>
-      <Heading as="h4">
-        Modifiers
-      </Heading>
-    </>
+    <FieldGroup name="Modifiers" />
   );
 };
 

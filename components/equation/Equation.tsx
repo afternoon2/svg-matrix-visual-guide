@@ -1,12 +1,8 @@
 import React from 'react';
-import { Heading } from 'theme-ui';
+import FieldGroup from '../common/fieldgroup';
 
 const Equation: React.FC = () => (
-  <>
-    <Heading as="h4">
-      Equation
-    </Heading>
-  </>
+  <FieldGroup name="Equation" />
 );
 
 export default Equation;
