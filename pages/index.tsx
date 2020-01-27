@@ -1,5 +1,7 @@
 import React from 'react';
-import { ThemeProvider, Box, Grid, Flex } from 'theme-ui';
+import {
+  ThemeProvider, Box, Grid, Flex,
+} from 'theme-ui';
 import theme from '../theme/theme';
 import Header from '../components/header';
 import Content from '../components/content';
@@ -16,7 +18,7 @@ const App: React.FC = () => (
       <Header />
       <Grid
         bg="muted"
-        columns={['repeat(2, 1fr)','repeat(2, 1fr)', 'repeat(2, 2fr)']}
+        columns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(2, 2fr)']}
         p={3}
         sx={{
           position: 'absolute',
@@ -24,7 +26,7 @@ const App: React.FC = () => (
           left: 0,
           height: 'calc(100vh - 60px)',
           width: '100%',
-          gridTemplateRows: ['1fr 1fr 3fr 1fr', '1fr 4fr 1fr', 'repeat(3, 1fr)']
+          gridTemplateRows: ['1fr 1fr 3fr 1fr', '1fr 4fr 1fr', 'repeat(3, 1fr)'],
         }}
       >
         <Box p={3} bg="highlight" sx={{ gridArea: ['1 / 1 / 2 / 3', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2'] }}>Equation</Box>
