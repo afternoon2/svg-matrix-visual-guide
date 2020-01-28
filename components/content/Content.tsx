@@ -9,7 +9,7 @@ const Content: React.FC = ({ children }) => (
       left: 0,
       width: '100%',
       height: 'calc(100vh - 60px)',
-      flexWrap: ['wrap', 'wrap', 'noWrap']
+      flexWrap: ['wrap', 'wrap', 'noWrap'],
     }}
   >
     {children}

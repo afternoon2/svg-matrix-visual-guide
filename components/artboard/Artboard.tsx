@@ -6,4 +6,3 @@ const Artboard: React.FC = () => (
 );
 
 export default Artboard;
-

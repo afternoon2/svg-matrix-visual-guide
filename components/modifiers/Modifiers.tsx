@@ -1,5 +1,7 @@
 import React from 'react';
-import { Flex, Label, Input, Slider } from 'theme-ui';
+import {
+  Flex, Label, Input, Slider,
+} from 'theme-ui';
 import { ModifierTarget } from './types';
 import MatrixContext from '../../context/matrix/context';
 import FieldGroup from '../common/fieldgroup';
@@ -26,15 +28,15 @@ const Modifiers: React.FC<Props> = ({ target }) => {
   return (
     <Flex sx={{ height: '100%' }}>
       <FieldGroup name={`New ${target.toUpperCase()} Modifiers`}>
-        {currentProps.map(prop => {
-          const onChange = (event: React.MouseEvent) => {
-            const target = event.target as HTMLInputElement;
+        {currentProps.map((prop): React.ReactElement => {
+          const onChange = (event: React.MouseEvent): void => {
+            const t = event.target as HTMLInputElement;
             dispatch({
               payload: {
-                [prop]: target.value,
+                [prop]: t.value,
               },
               type: 'set',
-            })
+            });
           };
           return (
             <Flex
@@ -46,9 +48,11 @@ const Modifiers: React.FC<Props> = ({ target }) => {
               <Label
                 ml={2}
                 sx={{
-                  width: '10%'
+                  width: '10%',
                 }}
-              >{prop}</Label>
+              >
+                {prop}
+              </Label>
               <Input
                 mt={2}
                 mb={2}
@@ -59,7 +63,7 @@ const Modifiers: React.FC<Props> = ({ target }) => {
                 value={state[prop]}
                 onChange={onChange}
                 sx={{
-                  width: '20%'
+                  width: '20%',
                 }}
               />
               <Slider
@@ -71,7 +75,7 @@ const Modifiers: React.FC<Props> = ({ target }) => {
                 ml={4}
                 mr={2}
                 sx={{
-                  width: '60%'
+                  width: '60%',
                 }}
               />
             </Flex>

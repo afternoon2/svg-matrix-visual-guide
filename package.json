@@ -12,6 +12,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@theme-ui/presets": "^0.3.0",
     "next": "^9.2.1",
+    "next-fonts": "^1.0.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "theme-ui": "^0.3.1"
@@ -21,8 +22,8 @@
     "build": "next build",
     "start": "next start",
     "commit": "git-cz",
-    "lint": "eslint -c .eslintrc.js pages/*.tsx",
-    "lint:fix": "eslint -c .eslintrc.js pages/*.tsx --fix"
+    "lint": "eslint -c .eslintrc.js pages/*.tsx components/**/*.tsx",
+    "lint:fix": "eslint -c .eslintrc.js pages/*.tsx components/**/*.tsx --fix"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",

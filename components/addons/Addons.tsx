@@ -6,4 +6,3 @@ const Addons: React.FC = () => (
 );
 
 export default Addons;
-

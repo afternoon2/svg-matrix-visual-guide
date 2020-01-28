@@ -15,20 +15,20 @@ const Header: React.FC = () => (
       height: '60px',
       width: '100%',
       alignItems: 'center',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     }}
   >
     <Heading as="h4">
       Visual Guide To SVG Matrix
     </Heading>
-    <Link 
+    <Link
       sx={{ color: 'text' }}
-      href="https://www.github.com/afternoon2/svg-matrix-visual-guide" 
+      href="https://www.github.com/afternoon2/svg-matrix-visual-guide"
       target="_blank"
     >
       <FontAwesomeIcon icon={faGithub} size="lg" />
     </Link>
-  </Flex>  
+  </Flex>
 );
 
 export default Header;
