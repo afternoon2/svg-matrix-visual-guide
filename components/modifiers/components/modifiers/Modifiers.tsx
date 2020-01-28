@@ -1,8 +1,8 @@
 import React from 'react';
 import { Flex, Label, Input } from 'theme-ui';
-import { ModifierTarget } from './types';
-import MatrixContext from '../../context/matrix/context';
-import FieldGroup from '../common/fieldgroup';
+import { ModifierTarget } from '../../types';
+import MatrixContext from '../../../../context/matrix/context';
+import FieldGroup from '../../../common/fieldgroup';
 
 interface Props {
   target: ModifierTarget;
@@ -37,7 +37,7 @@ const Modifiers: React.FC<Props> = ({ target }) => {
     <Flex sx={{ height: '100%' }}>
       <FieldGroup name={`New ${target.toUpperCase()} Modifiers`}>
         {currentProps.map(prop => (
-          <Flex
+          <Flex 
             key={prop}
             sx={{
               alignItems: 'center',

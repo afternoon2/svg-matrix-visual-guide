@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import { Flex, Box } from 'theme-ui';
 
 interface Props {
   name: string;
@@ -7,18 +7,19 @@ interface Props {
 
 const FieldGroup: React.FC<Props> = ({ name, children }) => (
   <>
-    <Box
+    <Flex
       as="fieldset"
       sx={{
         width: '100%',
         height: '100%',
+        flexWrap: ['nowrap', 'nowrap', 'wrap', 'wrap']
       }}
     >
       <Box as="legend" pl={2} pr={2} sx={{ fontSize: 3 }}>
         {name}
       </Box>
       {children}
-    </Box>
+    </Flex>
   </>
 );
 
