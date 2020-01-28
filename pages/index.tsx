@@ -7,6 +7,8 @@ import Header from '../components/header';
 import Modifiers from '../components/modifiers';
 import Equation from '../components/equation';
 import MatrixState from '../components/states/matrix';
+import Artboard from '../components/artboard';
+import Addons from '../components/addons';
 
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
@@ -31,13 +33,17 @@ const App: React.FC = () => (
           }}
         >
           <Box p={0} bg="background" sx={{ gridArea: ['1 / 1 / 2 / 3', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2'] }}>
-            <Equation />
-          </Box>
-          <Box bg="background" sx={{ gridArea: ['3 / 1 / 4 / 3', '2 / 1 / 3 / 3', '1 / 2 / 3 / 3'] }}>Artboard</Box>
-          <Box bg="background" sx={{ gridArea: ['2 / 1 / 3 / 3', '1 / 2 / 2 / 3', '2 / 1 / 4 / 2'] }}>
             <Modifiers />
           </Box>
-          <Box bg="background" sx={{ gridArea: ['4 / 1 / 5 / 3', '3 / 1 / 4 / 3', '3 / 2 / 4 / 3'] }}>Addons</Box>
+          <Box bg="background" sx={{ gridArea: ['3 / 1 / 4 / 3', '2 / 1 / 3 / 3', '1 / 2 / 3 / 3'] }}>
+            <Artboard />
+          </Box>
+          <Box bg="background" sx={{ gridArea: ['2 / 1 / 3 / 3', '1 / 2 / 2 / 3', '2 / 1 / 4 / 2'] }}>
+            <Equation />
+          </Box>
+          <Box bg="background" sx={{ gridArea: ['4 / 1 / 5 / 3', '3 / 1 / 4 / 3', '3 / 2 / 4 / 3'] }}>
+            <Addons />
+          </Box>
         </Grid>
       </Box>
     </MatrixState>
