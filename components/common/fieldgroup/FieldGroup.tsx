@@ -12,7 +12,7 @@ const FieldGroup: React.FC<Props> = ({ name, children }) => (
       sx={{
         width: '100%',
         height: '100%',
-        flexWrap: ['nowrap', 'nowrap', 'wrap', 'wrap']
+        flexDirection: 'column'
       }}
     >
       <Box as="legend" pl={2} pr={2} sx={{ fontSize: 3 }}>
