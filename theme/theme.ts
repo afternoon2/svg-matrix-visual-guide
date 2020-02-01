@@ -20,18 +20,21 @@ export default {
     ...THEME.styles,
   },
   breakpoints: [
-    '768px', '1680px', '1920px',
+    '1090px', '1800px', '1920px',
   ],
   fonts: {
     body: '"Crimson Text", serif',
     heading: '"Crimson Text", serif',
+    legend: '"Crimson Text", serif',
     monospace: '"Fira Code", monospace',
   },
   fontSizes: [
     9, 14, 18, 24,
   ],
   fontWeights: {
+    body: 400,
     heading: 400,
     legend: 600,
+    monospace: 400,
   }
 };
