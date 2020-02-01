@@ -1,15 +1,17 @@
-import { swiss } from '@theme-ui/presets';
+import { roboto } from '@theme-ui/presets';
+
+const THEME = roboto;
 
 export default {
-  ...swiss,
+  ...THEME,
   styles: {
-    ...swiss.styles,
+    ...THEME.styles,
   },
   breakpoints: [
     '768px', '1680px', '1920px',
   ],
   fonts: {
-    ...swiss.fonts,
+    ...THEME.fonts,
     equation: '"Crimson Text", serif',
   }
 };
