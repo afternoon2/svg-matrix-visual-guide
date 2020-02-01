@@ -5,6 +5,8 @@ import {
 import theme from '../theme/theme';
 import MatrixState from '../components/states/matrix';
 import FontFace from '../components/common/font_face';
+import Segment from '../components/common/segment';
+import Code from '../components/parts/code';
 
 const App: React.FC = () => (
   <>
@@ -30,61 +32,47 @@ const App: React.FC = () => (
             }}
           >
             <Flex
-              p={2}
               sx={{
                 gridArea: ['1 / 1 / 2 / 2', '1 / 2 / 2 / 4', '1 / 4 / 2 / 8'],
-                borderColor: 'tertiary',
-                border: '2px solid',
               }}
             >
-              Code goes here
+              <Code />
             </Flex>
             <Flex
-              p={2}
               sx={{
-                borderColor: 'tertiary',
-                border: '2px solid',
                 gridArea: ['2 / 1 / 5 / 2', '2 / 1 / 6 / 3', '2 / 3 / 6 / 6'],
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               Graph goes here
             </Flex>
             <Flex
-              p={2}
               sx={{
                 gridArea: ['5 / 1 / 7 / 2', '2 / 3 / 4 / 5', '2 / 6 / 4 / 9'],
-                borderColor: 'tertiary',
-                border: '2px solid',
               }}
             >
-              Equation goes here
+              <Segment title="Equation" />
             </Flex>
             <Flex
-              p={2}
               sx={{
                 gridArea: ['7 / 1 / 9 / 2', '4 / 3 / 6 / 5', '4 / 6 / 6 / 9'],
-                borderColor: 'tertiary',
-                border: '2px solid',
               }}
             >
-              Point goes here
+              <Segment title="Function" />
             </Flex>
             <Flex
-              p={2}
               sx={{
                 gridArea: ['9 / 1 / 11 / 2', '6 / 2 / 7 / 4', '6 / 4 / 8 / 8'],
-                borderColor: 'tertiary',
-                border: '2px solid',
               }}
             >
-              Function goes here
+              <Segment title="Point" />
             </Flex>
             <Flex
-              p={2}
               sx={{
                 gridArea: ['11 / 1 / 13 / 2', '7 / 2 / 8 / 4', '8 / 4 / 10 / 8'],
-                borderColor: 'tertiary',
-                border: '2px solid',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               Footer goes here

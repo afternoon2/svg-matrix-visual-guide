@@ -1,4 +1,5 @@
 import { roboto } from '@theme-ui/presets';
+import { rgba } from 'polished';
 
 const THEME = roboto;
 
@@ -11,6 +12,7 @@ export default {
      */
     text: '#fffffe',
     gray: '#a7a9be',
+    grayAlpha: rgba('#a7a9be', 0.25),
     background: '#0f0e17',
     primary: '#ff8906',
     secondary: '#f25f4c',
