@@ -15,8 +15,7 @@ const App: React.FC = () => (
           sx={{
             position: 'relative',
           }}
-        >
-        </Box>
+        />
       </MatrixState>
     </ThemeProvider>
   </>
