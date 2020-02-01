@@ -7,6 +7,7 @@ import MatrixState from '../components/states/matrix';
 import FontFace from '../components/common/font_face';
 import Segment from '../components/common/segment';
 import Code from '../components/parts/code';
+import Footer from '../components/parts/footer';
 
 const App: React.FC = () => (
   <>
@@ -75,7 +76,7 @@ const App: React.FC = () => (
                 justifyContent: 'center',
               }}
             >
-              Footer goes here
+              <Footer />
             </Flex>
           </Grid>
         </Box>

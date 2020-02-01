@@ -42,6 +42,10 @@ const FontFace: React.FC = () => (
           url('./fonts/fira-code-v7-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
           url('./fonts/fira-code-v7-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
     `}
     </style>
   </>
