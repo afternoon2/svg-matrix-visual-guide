@@ -22,8 +22,14 @@ const Footer: React.FC = () => (
     >
       Visual Guide To SVG Matrix
     </Heading>
-    <Heading as="h2" sx={{ color: 'gray', fontStyle: 'italic' }}>
-      made by afternoon2
+    <Heading as="h2">
+      <Link 
+        sx={{ color: 'gray', fontStyle: 'italic', textDecoration: 'none' }}
+        href="https://github.com/afternoon2" 
+        target="_blank"
+      >
+        made by afternoon2
+      </Link>
     </Heading>
     <Flex
       sx={{
@@ -32,7 +38,7 @@ const Footer: React.FC = () => (
       pt={50}
       pb={25}
     >
-      <Link href="https://github.com/afternoon2" target="_blank" mr={40} sx={{ color: 'gray' }}>
+      <Link href="https://github.com/afternoon2/svg-matrix-visual-guide" target="_blank" mr={40} sx={{ color: 'gray' }}>
         <FontAwesomeIcon icon={faGithub} size="lg" />
       </Link>
       <Link href="https://jakub-antolak.dev" target="_blank" mr={40} sx={{ color: 'gray' }}>

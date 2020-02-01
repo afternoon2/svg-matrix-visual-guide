@@ -24,7 +24,6 @@ const Segment: React.FC<Props> = ({ children, title, styles }) => (
         margin: '0 auto',
         fontSize: 20,
         padding: '0 15px 5px 15px',
-        fontStyle: 'italic',
       }}
     >
       {title}
