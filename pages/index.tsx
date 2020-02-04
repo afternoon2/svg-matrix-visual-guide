@@ -8,6 +8,7 @@ import FontFace from '../components/common/font_face';
 import Segment from '../components/common/segment';
 import Code from '../components/parts/code';
 import Footer from '../components/parts/footer';
+import Function from '../components/parts/function';
 
 const App: React.FC = () => (
   <>
@@ -16,11 +17,13 @@ const App: React.FC = () => (
       <MatrixState>
         <Box
           sx={{
+            width: '100%',
             position: 'relative',
           }}
         >
           <Grid
             columns={['1fr', 'repeat(4, 1fr)', 'repeat(10, 1fr)']}
+            p={4}
             sx={{
               gridTemplateRows: ['repeat(12, 1fr)', 'repeat(7, 1fr)', 'repeat(9, 1fr)'],
               gridColumnGap: 3,
@@ -60,7 +63,7 @@ const App: React.FC = () => (
                 gridArea: ['7 / 1 / 9 / 2', '4 / 3 / 6 / 5', '4 / 6 / 6 / 9'],
               }}
             >
-              <Segment title="Function" />
+              <Function />
             </Flex>
             <Flex
               sx={{

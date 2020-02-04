@@ -23,9 +23,9 @@ const Footer: React.FC = () => (
       Visual Guide To SVG Matrix
     </Heading>
     <Heading as="h2">
-      <Link 
+      <Link
         sx={{ color: 'gray', fontStyle: 'italic', textDecoration: 'none' }}
-        href="https://github.com/afternoon2" 
+        href="https://github.com/afternoon2"
         target="_blank"
       >
         made by afternoon2
