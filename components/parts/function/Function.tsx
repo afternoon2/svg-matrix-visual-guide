@@ -32,8 +32,10 @@ const Function: React.FC = () => {
       <Flex
         sx={{
           width: ['90%', '90%', '85%'],
+          height: '100%',
           alignItems: 'center',
           justifyContent: 'space-between',
+          margin: '0 auto',
         }}
       >
         <RoundedInput

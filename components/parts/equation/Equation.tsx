@@ -18,11 +18,13 @@ const Equation: React.FC = () => {
       styles={{
         boxSizing: 'border-box',
         justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Flex
         sx={{
           width: '100%',
+          margin: '0 auto',
           alignItems: 'center',
           justifyContent: 'space-around',
         }}

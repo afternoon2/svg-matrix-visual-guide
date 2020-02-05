@@ -57,14 +57,14 @@ const App: React.FC = () => (
                 gridArea: ['5 / 1 / 7 / 2', '2 / 3 / 4 / 5', '2 / 6 / 4 / 10'],
               }}
             >
-              <Equation />
+              <Function />
             </Flex>
             <Flex
               sx={{
                 gridArea: ['7 / 1 / 9 / 2', '4 / 3 / 6 / 5', '4 / 6 / 6 / 10'],
               }}
             >
-              <Function />
+              <Equation />
             </Flex>
             <Flex
               sx={{
