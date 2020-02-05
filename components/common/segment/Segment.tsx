@@ -22,7 +22,7 @@ const Segment: React.FC<Props> = ({ children, title, styles }) => (
       as="legend"
       sx={{
         margin: '0 auto',
-        fontSize: [20, 25, 25],
+        fontSize: [20, 23, 23],
         padding: '0 15px 5px 15px',
         // fontStyle: 'italic',
       }}

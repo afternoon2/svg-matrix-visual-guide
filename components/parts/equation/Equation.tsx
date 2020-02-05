@@ -22,7 +22,7 @@ const Equation: React.FC = () => {
     >
       <Flex
         sx={{
-          width: ['95%', '95%', '75%'],
+          width: '100%',
           alignItems: 'center',
           justifyContent: 'space-around',
         }}

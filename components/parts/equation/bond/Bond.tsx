@@ -42,6 +42,7 @@ const Bond: React.FC<Props> = ({
               justifyContent: 'space-between',
               width: '100%',
               paddingBottom: 90,
+              paddingTop: 20,
             }}
           >
             <Text

@@ -26,7 +26,7 @@ const App: React.FC = () => (
             columns={['1fr', 'repeat(4, 1fr)', 'repeat(10, 1fr)']}
             p={4}
             sx={{
-              gridTemplateRows: ['repeat(12, 1fr)', 'repeat(7, 1fr)', 'repeat(9, 1fr)'],
+              gridTemplateRows: ['repeat(12, 1fr)', 'repeat(5, 1fr)', 'repeat(9, 1fr)'],
               gridColumnGap: 3,
               gridRowGap: 3,
               position: 'absolute',
@@ -38,14 +38,14 @@ const App: React.FC = () => (
           >
             <Flex
               sx={{
-                gridArea: ['1 / 1 / 2 / 2', '1 / 2 / 2 / 4', '1 / 4 / 2 / 8'],
+                gridArea: ['1 / 1 / 2 / 2', '1 / 1 / 2 / 3', '1 / 2 / 2 / 6'],
               }}
             >
               <Code />
             </Flex>
             <Flex
               sx={{
-                gridArea: ['2 / 1 / 5 / 2', '2 / 1 / 6 / 3', '2 / 3 / 6 / 6'],
+                gridArea: ['2 / 1 / 5 / 2', '2 / 1 / 6 / 3', '2 / 2 / 6 / 6'],
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
@@ -54,28 +54,28 @@ const App: React.FC = () => (
             </Flex>
             <Flex
               sx={{
-                gridArea: ['5 / 1 / 7 / 2', '2 / 3 / 4 / 5', '2 / 6 / 4 / 9'],
+                gridArea: ['5 / 1 / 7 / 2', '2 / 3 / 4 / 5', '2 / 6 / 4 / 10'],
               }}
             >
               <Equation />
             </Flex>
             <Flex
               sx={{
-                gridArea: ['7 / 1 / 9 / 2', '4 / 3 / 6 / 5', '4 / 6 / 6 / 9'],
+                gridArea: ['7 / 1 / 9 / 2', '4 / 3 / 6 / 5', '4 / 6 / 6 / 10'],
               }}
             >
               <Function />
             </Flex>
             <Flex
               sx={{
-                gridArea: ['9 / 1 / 11 / 2', '6 / 2 / 7 / 4', '6 / 4 / 8 / 8'],
+                gridArea: ['9 / 1 / 11 / 2', '1 / 3 / 2 / 5', '1 / 6 / 2 / 10'],
               }}
             >
               <Segment title="Point" />
             </Flex>
             <Flex
               sx={{
-                gridArea: ['11 / 1 / 13 / 2', '7 / 2 / 8 / 4', '8 / 4 / 10 / 8'],
+                gridArea: ['11 / 1 / 13 / 2', '7 / 2 / 8 / 4', '4 / 4 / 10 / 8'],
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
