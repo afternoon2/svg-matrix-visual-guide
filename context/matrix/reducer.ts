@@ -9,7 +9,10 @@ export const initialState: MatrixState = {
   f: 1,
 };
 
-const matrixReducer = (state: MatrixState, { type, payload }: MatrixAction): MatrixState => {
+const matrixReducer = (
+  state: MatrixState,
+  { type, payload }: MatrixAction
+): MatrixState => {
   switch (type) {
     case 'set':
       return {
