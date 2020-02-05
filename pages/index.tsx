@@ -9,6 +9,7 @@ import Segment from '../components/common/segment';
 import Code from '../components/parts/code';
 import Footer from '../components/parts/footer';
 import Function from '../components/parts/function';
+import Equation from '../components/parts/equation';
 
 const App: React.FC = () => (
   <>
@@ -56,7 +57,7 @@ const App: React.FC = () => (
                 gridArea: ['5 / 1 / 7 / 2', '2 / 3 / 4 / 5', '2 / 6 / 4 / 9'],
               }}
             >
-              <Segment title="Equation" />
+              <Equation />
             </Flex>
             <Flex
               sx={{

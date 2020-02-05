@@ -27,7 +27,8 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-plusplus': 0,
     'react/jsx-max-props-per-line': 1,
-    'react/jsx-props-no-spreading': 0
+    'react/jsx-props-no-spreading': 0,
+    'react/destructuring-assignment': 0,
   },
   settings: {
     react: {

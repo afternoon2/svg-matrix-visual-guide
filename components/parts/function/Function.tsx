@@ -23,7 +23,7 @@ const Function: React.FC = () => {
 
   return (
     <Segment
-      title="Function"
+      title="Modifiers"
       styles={{
         alignItems: 'center',
         justifyContent: 'center',

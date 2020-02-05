@@ -56,6 +56,7 @@ const RoundedInput: React.FC<Props> = ({
             justifyContent: 'center',
             backgroundColor: 'backgroundLight',
             marginBottom: 20,
+            cursor: 'pointer',
           }}
           onMouseDown={onMouseDown}
           onTouchStart={onTouchStart}

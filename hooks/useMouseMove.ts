@@ -6,7 +6,6 @@ export default (
 ) => {
   const startY = React.useRef(0);
   const handleMouseUp = (event: MouseEvent) => {
-    document.body.style.cursor = 'initial';
     document.removeEventListener('mousemove', handleMouseMove);
     document.removeEventListener('touchmove', handleMouseMove);
     document.removeEventListener('mouseup', handleMouseUp);
@@ -29,7 +28,6 @@ export default (
 
   const onMouseDown = (event: React.MouseEvent) => {
     startY.current = event.clientY;
-    document.body.style.cursor = 'none';
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
     event.preventDefault();

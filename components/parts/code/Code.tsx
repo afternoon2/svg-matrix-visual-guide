@@ -26,6 +26,7 @@ const Code: React.FC = () => {
           padding: 0,
           paddingBottom: 2,
           fontSize: [15, 22, 23],
+          textAlign: 'center',
         }}
       >
         transform=&quot;matrix(
