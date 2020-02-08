@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Grid, Flex } from 'theme-ui';
-import Segment from '../../common/segment';
 import Code from '../code';
 import Footer from '../footer';
 import Function from '../function';
 import Equation from '../equation';
+import Graph from '../graph';
 
 const Layout: React.FC = () => (
   <Box
@@ -37,11 +37,11 @@ const Layout: React.FC = () => (
       <Flex
         sx={{
           gridArea: ['2 / 1 / 5 / 2', '2 / 1 / 6 / 3', '2 / 2 / 6 / 6'],
-          alignItems: 'center',
+          alignItems: 'stretch',
           justifyContent: 'center',
         }}
       >
-        Graph goes here
+        <Graph />
       </Flex>
       <Flex
         sx={{
@@ -61,9 +61,7 @@ const Layout: React.FC = () => (
         sx={{
           gridArea: ['9 / 1 / 11 / 2', '1 / 3 / 2 / 5', '1 / 6 / 2 / 10'],
         }}
-      >
-        <Segment title="Point" />
-      </Flex>
+      />
       <Flex
         sx={{
           gridArea: ['11 / 1 / 13 / 2', '7 / 2 / 8 / 4', '4 / 4 / 10 / 8'],
