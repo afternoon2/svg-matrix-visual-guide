@@ -1,6 +1,7 @@
 import React, { MutableRefObject, createRef } from 'react';
 import { Flex } from 'theme-ui';
 import Axis from './axis';
+import Figures from './figures';
 
 const margin: { [key: string]: number } = {
   top: 30,
@@ -63,9 +64,7 @@ const Graph: React.FC = () => {
           viewBoxHeight={currentHeight}
           viewBoxWidth={currentWidth}
         />
-        <g transform={`translate(${margin.left}, ${margin.top})`}>
-          <rect x={0} y={0} width={20} height={20} stroke="pink" strokeWidth={2} fill="none" />
-        </g>
+        <Figures translate={{ x: margin.left, y: margin.right }} />
       </svg>
     </Flex>
   );
