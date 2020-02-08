@@ -1,5 +1,6 @@
 import React, { MutableRefObject, createRef } from 'react';
 import { Flex } from 'theme-ui';
+import Axis from './axis';
 
 const margin: { [key: string]: number } = {
   top: 30,
@@ -9,18 +10,20 @@ const margin: { [key: string]: number } = {
 };
 
 const Graph: React.FC = () => {
-  const [viewBox, setViewBox] = React.useState<string>('0 0 0 0');
+  const [currentWidth, setCurrentWidth] = React.useState<number>(0);
+  const [currentHeight, setCurrentHeight] = React.useState<number>(0);
   const ref: MutableRefObject<HTMLFieldSetElement> = createRef();
 
   const handleResize = React.useCallback(() => {
     if (ref.current) {
-      const { width, height } = ref.current.getBoundingClientRect();
-      setViewBox(`0 0 ${Math.round(width)} ${Math.round(height)}`);
+      const { width, height } = ref.current.parentElement.getBoundingClientRect();
+      setCurrentWidth(Math.round(width));
+      setCurrentHeight(Math.round(height));
     }
-  }, [ref, setViewBox]);
+  }, [ref, setCurrentWidth, setCurrentHeight]);
 
   React.useEffect(() => {
-    if (viewBox === '0 0 0 0') {
+    if (currentHeight === 0 && currentWidth === 0) {
       handleResize();
     }
     window.addEventListener('resize', handleResize);
@@ -31,21 +34,35 @@ const Graph: React.FC = () => {
 
   return (
     <Flex
-      ref={ref}
-      title="Graph"
-      styles={{
+      sx={{
         boxSizing: 'border-box',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
         height: 'inherit',
       }}
+      ref={ref}
     >
       <svg
         width="100%"
         height="100%"
-        viewBox={viewBox}
+        viewBox={`0 0 ${currentWidth} ${currentHeight}`}
+        preserveAspectRatio="xMidyMid"
       >
+        <Axis
+          axis="x"
+          marginTop={margin.top}
+          marginLeft={margin.left}
+          viewBoxHeight={currentHeight}
+          viewBoxWidth={currentWidth}
+        />
+        <Axis
+          axis="y"
+          marginTop={margin.top}
+          marginLeft={margin.left}
+          viewBoxHeight={currentHeight}
+          viewBoxWidth={currentWidth}
+        />
         <g transform={`translate(${margin.left}, ${margin.top})`}>
           <rect x={0} y={0} width={20} height={20} stroke="pink" strokeWidth={2} fill="none" />
         </g>
