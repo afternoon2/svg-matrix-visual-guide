@@ -63,9 +63,8 @@ const BracketPair: React.FC<Props> = ({
             sx={{
               color: mode === 'equation' ? 'text' : 'primary',
               fontFamily: 'monospace',
-              fontSize: 24,
+              fontSize: 20,
               textAlign: 'center',
-              // paddingBottom: 10,
             }}
           >
             {modifierTopValue}
@@ -75,7 +74,7 @@ const BracketPair: React.FC<Props> = ({
             sx={{
               color: mode === 'equation' ? 'text' : 'primary',
               fontFamily: 'monospace',
-              fontSize: 24,
+              fontSize: 20,
               textAlign: 'center',
             }}
           >
