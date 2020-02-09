@@ -93,8 +93,6 @@ const Figures: React.FC<Props> = ({ translate }) => {
       <rect
         {...commonRectProps}
         fill={theme.colors.secondary}
-        stroke={theme.colors.text}
-        strokeWidth={2}
         transform={`matrix(${a} ${b} ${c} ${d} ${e} ${f})`}
       />
       <Circle
