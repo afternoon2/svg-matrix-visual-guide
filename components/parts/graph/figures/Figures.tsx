@@ -23,7 +23,9 @@ const Figures: React.FC<Props> = ({ translate }) => {
   } = React.useContext(MatrixContext);
   const { theme } = useThemeUI();
   return (
-    <g transform={`translate(${Object.values(translate)})`}>
+    <g
+      transform={`translate(${Object.values(translate)})`}
+    >
       <rect
         {...topLeft}
         width={bottomRight.x - topLeft.x}
