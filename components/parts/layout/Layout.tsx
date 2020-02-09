@@ -14,10 +14,10 @@ const Layout: React.FC = () => (
     }}
   >
     <Grid
-      columns={['1fr', 'repeat(4, 1fr)', 'repeat(10, 1fr)']}
+      columns={['repeat(2, 1fr)', 'repeat(12, 1fr)', 'repeat(12, 1fr)']}
       p={4}
       sx={{
-        gridTemplateRows: ['repeat(12, 1fr)', 'repeat(5, 1fr)', 'repeat(9, 1fr)'],
+        gridTemplateRows: ['repeat(12, 1fr)', 'repeat(10, 1fr)', 'repeat(10, 1fr)'],
         gridColumnGap: 3,
         gridRowGap: 3,
         position: 'absolute',
@@ -29,14 +29,14 @@ const Layout: React.FC = () => (
     >
       <Flex
         sx={{
-          gridArea: ['1 / 1 / 2 / 2', '1 / 1 / 2 / 3', '1 / 2 / 2 / 6'],
+          gridArea: ['11 / 1 / 12 / 2', '8 / 7 / 9 / 13', '7 / 9 / 9 / 13'],
         }}
       >
         <Code />
       </Flex>
       <Flex
         sx={{
-          gridArea: ['2 / 1 / 5 / 2', '2 / 1 / 6 / 3', '2 / 2 / 6 / 6'],
+          gridArea: ['1 / 1 / 7 / 3', '1 / 1 / 7 / 13', '1 / 1 / 11 / 9'],
           alignItems: 'stretch',
           justifyContent: 'center',
         }}
@@ -45,26 +45,28 @@ const Layout: React.FC = () => (
       </Flex>
       <Flex
         sx={{
-          gridArea: ['5 / 1 / 7 / 2', '2 / 3 / 4 / 5', '2 / 6 / 4 / 10'],
+          gridArea: ['7 / 1 / 8 / 3', '7 / 7 / 8 / 13', '5 / 9 / 7 / 13'],
         }}
       >
         <Function />
       </Flex>
       <Flex
         sx={{
-          gridArea: ['7 / 1 / 9 / 2', '4 / 3 / 6 / 5', '4 / 6 / 6 / 10'],
+          gridArea: ['8 / 1 / 11 / 3', '7 / 1 / 9 / 7', '2 / 9 / 5 / 13'],
         }}
       >
         <Equation />
       </Flex>
       <Flex
         sx={{
-          gridArea: ['9 / 1 / 11 / 2', '1 / 3 / 2 / 5', '1 / 6 / 2 / 10'],
+          gridArea: ['12 / 1 / 13 / 2', '9 / 7 / 11 / 13', '9 / 9 / 11 / 13'],
         }}
-      />
+      >
+        Point
+      </Flex>
       <Flex
         sx={{
-          gridArea: ['11 / 1 / 13 / 2', '7 / 2 / 8 / 4', '4 / 4 / 10 / 8'],
+          gridArea: ['11 / 2 / 13 / 3', '9 / 1 / 11 / 7', '1 / 9 / 2 / 13'],
           alignItems: 'center',
           justifyContent: 'center',
         }}

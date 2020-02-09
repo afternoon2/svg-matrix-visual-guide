@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
       as="h1"
       sx={{
         color: 'body',
-        fontSize: [30, 35, 40],
+        fontSize: [30, 35, 35],
         lineHeight: 2,
       }}
     >
