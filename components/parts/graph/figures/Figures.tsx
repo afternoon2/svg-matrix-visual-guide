@@ -55,6 +55,7 @@ const Figures: React.FC<Props> = ({ translate }) => {
         const onClick = (): void => handlePointClick(name);
         return (
           <Circle
+            name={name}
             key={name}
             cx={coords.x}
             cy={coords.y}

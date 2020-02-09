@@ -5,7 +5,7 @@ export const initialState: MatrixState = {
   b: 1,
   c: 1,
   d: 0,
-  e: 50,
+  e: 250,
   f: -50,
 };
 
