@@ -5,6 +5,7 @@ import MatrixContext from '../../../context/matrix/context';
 import BracketPair from './bracket_pair';
 import Bond from './bond';
 import PointsContext from '../../../context/points/context';
+import { Vec2 } from '../../../context/points/types';
 
 const Equation: React.FC = () => {
   const {
@@ -14,10 +15,9 @@ const Equation: React.FC = () => {
     },
   } = React.useContext(MatrixContext);
   const {
-    state: {
-      topLeft,
-    },
+    state,
   } = React.useContext(PointsContext);
+  const point: Vec2 = state[state.current];
   return (
     <Segment
       title="Equation"
@@ -45,7 +45,7 @@ const Equation: React.FC = () => {
         <Bond
           mode="equation"
           propName="x"
-          propValue={topLeft.x}
+          propValue={point.x}
         />
         <BracketPair
           mode="equation"
@@ -57,7 +57,7 @@ const Equation: React.FC = () => {
         <Bond
           mode="equation"
           propName="y"
-          propValue={topLeft.y}
+          propValue={point.y}
         />
         <BracketPair
           mode="equation"
@@ -72,9 +72,9 @@ const Equation: React.FC = () => {
         <BracketPair
           mode="result"
           modifierTop="x"
-          modifierTopValue={a * topLeft.x + c * topLeft.y + e}
+          modifierTopValue={a * point.x + c * point.y + e}
           modifierBottom="y"
-          modifierBottomValue={b * topLeft.x + d * topLeft.y + f}
+          modifierBottomValue={b * point.x + d * point.y + f}
         />
       </Flex>
     </Segment>

@@ -17,7 +17,8 @@ const Footer: React.FC = () => (
       sx={{
         color: 'body',
         fontSize: [30, 35, 35],
-        lineHeight: 2,
+        lineHeight: [1.27, 1.61, 2],
+        textAlign: 'center',
       }}
     >
       Visual Guide To SVG Matrix

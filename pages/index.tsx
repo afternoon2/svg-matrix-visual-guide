@@ -7,6 +7,7 @@ import MatrixState from '../components/states/matrix';
 import FontFace from '../components/common/font_face';
 import PointsState from '../components/states/points';
 import Layout from '../components/parts/layout';
+import FigureState from '../components/states/figure';
 
 const App: React.FC = () => (
   <>
@@ -14,7 +15,9 @@ const App: React.FC = () => (
     <ThemeProvider theme={theme}>
       <MatrixState>
         <PointsState>
-          <Layout />
+          <FigureState>
+            <Layout />
+          </FigureState>
         </PointsState>
       </MatrixState>
     </ThemeProvider>

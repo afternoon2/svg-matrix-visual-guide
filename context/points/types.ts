@@ -5,7 +5,13 @@ export interface Vec2 {
   y: number;
 }
 
+export type CurrentPoint = 'topLeft'
+  | 'topRight'
+  | 'bottomRight'
+  | 'bottomRight';
+
 export interface PointsState {
+  current: CurrentPoint;
   topLeft: Vec2;
   topRight: Vec2;
   bottomRight: Vec2;

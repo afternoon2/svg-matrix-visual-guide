@@ -61,7 +61,7 @@ const Axis: React.FC<Props> = ({
             <text
               fill={theme.colors.gray}
               style={{
-                fontSize: '12px',
+                fontSize: '10px',
                 textAnchor: 'middle',
                 transform: `translate${axis === 'x' ? 'Y' : 'X'}(${axis === 'x' ? 20 : 10}px)`,
                 fontFamily: theme.fonts.monospace,

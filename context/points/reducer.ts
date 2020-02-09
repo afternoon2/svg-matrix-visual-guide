@@ -1,6 +1,7 @@
 import { PointsState, PointsAction } from './types';
 
 export const initialState: PointsState = {
+  current: 'topLeft',
   topLeft: {
     x: 100,
     y: 100,

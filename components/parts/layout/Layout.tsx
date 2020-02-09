@@ -5,6 +5,7 @@ import Footer from '../footer';
 import Function from '../function';
 import Equation from '../equation';
 import Graph from '../graph';
+import Point from '../point';
 
 const Layout: React.FC = () => (
   <Box
@@ -62,7 +63,7 @@ const Layout: React.FC = () => (
           gridArea: ['12 / 1 / 13 / 2', '9 / 7 / 11 / 13', '9 / 9 / 11 / 13'],
         }}
       >
-        Point
+        <Point />
       </Flex>
       <Flex
         sx={{
