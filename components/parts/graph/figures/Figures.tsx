@@ -4,12 +4,20 @@ import { Vec2, CurrentPoint } from '../../../../context/points/types';
 import PointsContext from '../../../../context/points/context';
 import MatrixContext from '../../../../context/matrix/context';
 import Circle from '../circle';
+import FigureContext from '../../../../context/figure/context';
+import useDrag from '../../../../hooks/useDrag';
 
 interface Props {
   translate: Vec2;
 }
 
 const Figures: React.FC<Props> = ({ translate }) => {
+  const {
+    state: {
+      x, y, width, height,
+    },
+    dispatch: figureDispatch,
+  } = React.useContext(FigureContext);
   const {
     state,
     dispatch,
@@ -21,23 +29,51 @@ const Figures: React.FC<Props> = ({ translate }) => {
     },
   } = React.useContext(MatrixContext);
   const { theme } = useThemeUI();
-  const commonRectProps: { [key: string]: any } = {
-    ...state.topLeft,
-    width: state.bottomRight.x - state.topLeft.x,
-    height: state.bottomRight.y - state.topLeft.y,
-  };
 
-  const points: Array<[string, Vec2]> = Object.entries(state)
-    .filter((entry) => typeof entry[1] === 'object');
-
-  const handlePointClick = React.useCallback((name: string) => {
-    dispatch({
+  const currentPointDiff = React.useRef<Vec2>({ x: 0, y: 0 });
+  const handleRectDown = React.useCallback(
+    (event: React.MouseEvent<SVGElement, MouseEvent> | React.TouchEvent<SVGElement>) => {
+      const { type: eventType } = event;
+      const pointerX: number = eventType === 'touchstart'
+        ? (event as React.TouchEvent).touches[0].clientX
+        : (event as React.MouseEvent).clientX;
+      const pointerY: number = eventType === 'touchstart'
+        ? (event as React.TouchEvent).touches[0].clientY
+        : (event as React.MouseEvent).clientY;
+      currentPointDiff.current = {
+        x: pointerX - x,
+        y: pointerY - y,
+      };
+    },
+    [currentPointDiff, x, y],
+  );
+  const handleRectDrag = React.useCallback((newPos: Vec2) => {
+    figureDispatch({
       type: 'set',
       payload: {
-        current: name as CurrentPoint,
+        x: newPos.x - currentPointDiff.current.x,
+        y: newPos.y - currentPointDiff.current.y,
       },
     });
-  }, [dispatch]);
+  }, [figureDispatch, currentPointDiff]);
+
+  const [onMouseDown, onTouchStart] = useDrag(handleRectDrag, handleRectDown);
+
+  const commonRectProps: { [key: string]: any } = {
+    x, y, width, height,
+  };
+
+  const handlePointClick = React.useCallback(
+    (event: React.MouseEvent) => {
+      dispatch({
+        type: 'set',
+        payload: {
+          current: (event.target as SVGCircleElement).id as CurrentPoint,
+        },
+      });
+    },
+    [dispatch],
+  );
 
   return (
     <g
@@ -48,26 +84,50 @@ const Figures: React.FC<Props> = ({ translate }) => {
         fill={theme.colors.background}
         stroke={theme.colors.primary}
         strokeWidth={2}
+        style={{
+          cursor: 'move',
+        }}
+        onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
       />
-      {points.map((entry: [string, Vec2]) => {
-        const [name, coords] = entry;
-        const isSelected = name === state.current;
-        const onClick = (): void => handlePointClick(name);
-        return (
-          <Circle
-            name={name}
-            key={name}
-            cx={coords.x}
-            cy={coords.y}
-            isSelected={isSelected}
-            onClick={onClick}
-          />
-        );
-      })}
       <rect
         {...commonRectProps}
         fill={theme.colors.secondary}
+        stroke={theme.colors.text}
+        strokeWidth={2}
         transform={`matrix(${a} ${b} ${c} ${d} ${e} ${f})`}
+      />
+      <Circle
+        id="topLeft"
+        name="Top Left"
+        cx={state.topLeft.x}
+        cy={state.topLeft.y}
+        isSelected={state.current === 'topLeft'}
+        onClick={handlePointClick}
+      />
+      <Circle
+        id="topRight"
+        name="Top Right"
+        cx={state.topRight.x}
+        cy={state.topRight.y}
+        isSelected={state.current === 'topRight'}
+        onClick={handlePointClick}
+      />
+      <Circle
+        id="bottomRight"
+        name="Bottom Right"
+        cx={state.bottomRight.x}
+        cy={state.bottomRight.y}
+        isSelected={state.current === 'bottomRight'}
+        onClick={handlePointClick}
+      />
+      <Circle
+        id="bottomLeft"
+        name="Bottom Left"
+        cx={state.bottomLeft.x}
+        cy={state.bottomLeft.y}
+        isSelected={state.current === 'bottomLeft'}
+        onClick={handlePointClick}
       />
     </g>
   );

@@ -56,8 +56,9 @@ const Bond: React.FC<Props> = ({
             <Text
               as="span"
               sx={{
-                fontSize: 25,
+                fontSize: 23,
                 color,
+                fontFamily: 'monospace',
               }}
             >
               {propValue}

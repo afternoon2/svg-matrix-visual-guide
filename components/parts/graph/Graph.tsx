@@ -48,7 +48,6 @@ const Graph: React.FC = () => {
         width="100%"
         height="100%"
         viewBox={`0 0 ${currentWidth} ${currentHeight}`}
-        preserveAspectRatio="xMidyMid"
       >
         <Axis
           axis="x"

@@ -8,7 +8,7 @@ export interface Vec2 {
 export type CurrentPoint = 'topLeft'
   | 'topRight'
   | 'bottomRight'
-  | 'bottomRight';
+  | 'bottomLeft';
 
 export interface PointsState {
   current: CurrentPoint;
