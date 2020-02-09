@@ -2,12 +2,16 @@ import React from 'react';
 import { Flex } from 'theme-ui';
 
 interface Props {
+  id?: string;
   styles?: React.CSSProperties;
   title: string;
 }
 
-const Segment: React.FC<Props> = ({ children, title, styles }) => (
+const Segment: React.FC<Props> = ({
+  id, children, title, styles,
+}) => (
   <Flex
+    id={id}
     as="fieldset"
     sx={{
       width: '100%',

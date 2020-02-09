@@ -7,7 +7,10 @@ module.exports = {
   extends: [
     'airbnb',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+  ],
+  plugins: [
+    'react-hooks'
   ],
   parserOptions: {
     ecmaVersion: 2019,

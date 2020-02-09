@@ -23,6 +23,7 @@ const Function: React.FC = () => {
 
   return (
     <Segment
+      id="function"
       title="Function"
       styles={{
         alignItems: 'center',

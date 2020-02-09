@@ -35,6 +35,7 @@ const Graph: React.FC = () => {
 
   return (
     <Flex
+      id="graph"
       sx={{
         boxSizing: 'border-box',
         justifyContent: 'center',

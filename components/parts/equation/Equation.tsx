@@ -20,6 +20,7 @@ const Equation: React.FC = () => {
   const point: Vec2 = state[state.current];
   return (
     <Segment
+      id="equation"
       title="Equation"
       styles={{
         boxSizing: 'border-box',

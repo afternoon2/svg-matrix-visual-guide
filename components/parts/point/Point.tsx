@@ -50,6 +50,7 @@ const Point: React.FC = () => {
 
   return (
     <Segment
+      id="point"
       title="Selected Point"
       styles={{
         alignItems: 'center',
