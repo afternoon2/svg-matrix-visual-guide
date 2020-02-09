@@ -38,8 +38,17 @@ const Circle: React.FC<Props> = ({
         onBlur={handleMouseOut}
       />
       {(hover || isSelected) && (
-        <g transform="translate(10, 10)">
-          <rect x={cx} y={cy} fill={theme.colors.backgroundLight} width="150" height={isSelected ? 115 : 95} stroke={theme.colors.tertiary} />
+        <g
+          transform="translate(10, 10)"
+        >
+          <rect
+            x={cx}
+            y={cy}
+            fill={theme.colors.backgroundLight}
+            width="150"
+            height={isSelected ? 115 : 95}
+            stroke={theme.colors.tertiary}
+          />
           <text
             x={cx}
             y={cy}
@@ -74,7 +83,7 @@ const Circle: React.FC<Props> = ({
               x={cx + 10}
               dy="1.6em"
             >
-              x:
+              x:&nbsp;
               <tspan
                 fill={theme.colors.tertiary}
               >
@@ -82,7 +91,7 @@ const Circle: React.FC<Props> = ({
               </tspan>
             </tspan>
             <tspan x={cx + 10} dy="1.6em">
-              y:
+              y:&nbsp;
               <tspan fill={theme.colors.secondary}>{cy}</tspan>
             </tspan>
           </text>

@@ -16,14 +16,10 @@ const Faq: React.FC = () => (
         textDecoration: 'none',
         fontStyle: 'italic',
         fontSize: 22,
-        color: 'text',
-        transition: '120ms',
-        '&:hover': {
-          color: 'primary',
-        },
       }}
+      variant="transitionText"
     >
-        What the heck is going on here?&nbsp;
+        What is going on here?&nbsp;
       <span style={{ fontStyle: 'normal' }} role="img" aria-label="Thinking face emoji">
           🤔
       </span>

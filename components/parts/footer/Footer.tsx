@@ -4,6 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
 
+const iconLinkProps: { [key: string]: any } = {
+  target: '_blank',
+  mr: 40,
+};
+
 const Footer: React.FC = () => (
   <Flex
     sx={{
@@ -39,14 +44,27 @@ const Footer: React.FC = () => (
       pt={50}
       pb={25}
     >
-      <Link href="https://github.com/afternoon2/svg-matrix-visual-guide" target="_blank" mr={40} sx={{ color: 'gray' }}>
-        <FontAwesomeIcon icon={faGithub} size="lg" />
+      <Link
+        href="https://github.com/afternoon2/svg-matrix-visual-guide"
+        variant="transition"
+        {...iconLinkProps}
+      >
+        <FontAwesomeIcon icon={faGithub} size="2x" />
       </Link>
-      <Link href="https://jakub-antolak.dev" target="_blank" mr={40} sx={{ color: 'gray' }}>
-        <FontAwesomeIcon icon={faBlog} size="lg" />
+      <Link
+        variant="transition"
+        {...iconLinkProps}
+        href="https://jakub-antolak.dev"
+      >
+        <FontAwesomeIcon icon={faBlog} size="2x" />
       </Link>
-      <Link href="https://twitter.com/jakub_antolak" target="_blank" sx={{ color: 'gray' }}>
-        <FontAwesomeIcon icon={faTwitter} size="lg" />
+      <Link
+        href="https://twitter.com/jakub_antolak"
+        variant="transition"
+        {...iconLinkProps}
+        mr={0}
+      >
+        <FontAwesomeIcon icon={faTwitter} size="2x" />
       </Link>
     </Flex>
   </Flex>

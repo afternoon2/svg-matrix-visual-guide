@@ -39,5 +39,21 @@ export default {
     heading: 400,
     legend: 600,
     monospace: 400,
+  },
+  links: {
+    transition: {
+      color: 'gray',
+      transition: '120ms',
+      '&:hover': {
+        color: 'primary',
+      }
+    },
+    transitionText: {
+      color: 'text',
+      transition: '120ms',
+      '&:hover': {
+        color: 'primary',
+      }
+    }
   }
 };
