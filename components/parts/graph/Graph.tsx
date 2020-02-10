@@ -1,7 +1,8 @@
 import React, { MutableRefObject, createRef } from 'react';
 import { Flex } from 'theme-ui';
 import Axis from './axis';
-import Figures from './figures';
+import Rectangle from './rectangle';
+import MovedRectangle from './moved_rectangle';
 
 const margin: { [key: string]: number } = {
   top: 30,
@@ -64,7 +65,12 @@ const Graph: React.FC = () => {
           viewBoxHeight={currentHeight}
           viewBoxWidth={currentWidth}
         />
-        <Figures translate={{ x: margin.left, y: margin.right }} />
+        <g
+          transform={`translate(${margin.left}, ${margin.right})`}
+        >
+          <Rectangle />
+          <MovedRectangle />
+        </g>
       </svg>
     </Flex>
   );

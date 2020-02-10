@@ -2,16 +2,11 @@ import React from 'react';
 import { useThemeUI } from 'theme-ui';
 import { Vec2, CurrentPoint } from '../../../../context/points/types';
 import PointsContext from '../../../../context/points/context';
-import MatrixContext from '../../../../context/matrix/context';
 import Circle from '../circle';
 import FigureContext from '../../../../context/figure/context';
 import useDrag from '../../../../hooks/useDrag';
 
-interface Props {
-  translate: Vec2;
-}
-
-const Figures: React.FC<Props> = ({ translate }) => {
+const Rectangle: React.FC = () => {
   const {
     state: {
       x, y, width, height,
@@ -22,12 +17,6 @@ const Figures: React.FC<Props> = ({ translate }) => {
     state,
     dispatch,
   } = React.useContext(PointsContext);
-  const {
-    state: {
-      a, c, e,
-      b, d, f,
-    },
-  } = React.useContext(MatrixContext);
   const { theme } = useThemeUI();
 
   const currentPointDiff = React.useRef<Vec2>({ x: 0, y: 0 });
@@ -76,9 +65,7 @@ const Figures: React.FC<Props> = ({ translate }) => {
   );
 
   return (
-    <g
-      transform={`translate(${Object.values(translate)})`}
-    >
+    <>
       <rect
         {...commonRectProps}
         fill={theme.colors.background}
@@ -89,11 +76,6 @@ const Figures: React.FC<Props> = ({ translate }) => {
         }}
         onMouseDown={onMouseDown}
         onTouchStart={onTouchStart}
-      />
-      <rect
-        {...commonRectProps}
-        fill={theme.colors.secondary}
-        transform={`matrix(${a} ${b} ${c} ${d} ${e} ${f})`}
       />
       <Circle
         id="topLeft"
@@ -127,8 +109,8 @@ const Figures: React.FC<Props> = ({ translate }) => {
         isSelected={state.current === 'bottomLeft'}
         onClick={handlePointClick}
       />
-    </g>
+    </>
   );
 };
 
-export default Figures;
+export default Rectangle;
