@@ -21,7 +21,7 @@ const Footer: React.FC = () => (
       as="h1"
       sx={{
         color: 'body',
-        fontSize: [30, 35, 35],
+        fontSize: [30, 32, 32],
         lineHeight: [1.27, 1.61, 2],
         textAlign: 'center',
       }}
@@ -41,8 +41,8 @@ const Footer: React.FC = () => (
       sx={{
         alignItems: 'center',
       }}
-      pt={50}
-      pb={25}
+      pt={30}
+      pb={20}
     >
       <Link
         href="https://github.com/afternoon2/svg-matrix-visual-guide"

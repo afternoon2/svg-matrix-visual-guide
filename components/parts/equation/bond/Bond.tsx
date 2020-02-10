@@ -27,10 +27,10 @@ const Bond: React.FC<Props> = ({
           <Text
             as="span"
             sx={{
-              fontSize: 25,
+              fontSize: 18,
               color,
               fontStyle: 'italic',
-              paddingTop: 25,
+              paddingTop: 35,
             }}
           >
             {propName.toUpperCase()}
@@ -48,7 +48,7 @@ const Bond: React.FC<Props> = ({
             <Text
               as="span"
               sx={{
-                fontSize: 20,
+                fontSize: 18,
               }}
             >
               ×

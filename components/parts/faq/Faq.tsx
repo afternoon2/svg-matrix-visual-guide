@@ -7,6 +7,8 @@ const Faq: React.FC = () => (
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
+      height: '80px',
+      padding: 2,
     }}
   >
     <Link

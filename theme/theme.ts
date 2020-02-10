@@ -23,7 +23,7 @@ export default {
     ...THEME.styles,
   },
   breakpoints: [
-    '1090px', '1800px', '1920px',
+    '1500px', '1800px', '1920px',
   ],
   fonts: {
     body: '"Crimson Text", serif',

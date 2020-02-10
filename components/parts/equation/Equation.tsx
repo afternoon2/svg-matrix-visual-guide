@@ -34,6 +34,7 @@ const Equation: React.FC = () => {
           margin: '0 auto',
           alignItems: 'center',
           justifyContent: 'space-around',
+          paddingBottom: 20,
         }}
       >
         <BracketPair

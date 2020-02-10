@@ -63,7 +63,7 @@ const BracketPair: React.FC<Props> = ({
             sx={{
               color: mode === 'equation' ? 'text' : 'primary',
               fontFamily: 'monospace',
-              fontSize: 20,
+              fontSize: [20, 18, 20],
               textAlign: 'center',
             }}
           >
@@ -74,7 +74,7 @@ const BracketPair: React.FC<Props> = ({
             sx={{
               color: mode === 'equation' ? 'text' : 'primary',
               fontFamily: 'monospace',
-              fontSize: 20,
+              fontSize: [20, 18, 20],
               textAlign: 'center',
             }}
           >

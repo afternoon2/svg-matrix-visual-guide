@@ -65,7 +65,7 @@ const RoundedInput: React.FC<Props> = ({
           <Text
             as="span"
             sx={{
-              fontSize: [25, 28],
+              fontSize: 20,
               fontFamily: 'monospace',
               minWidth: '30px',
               textAlign: 'center',

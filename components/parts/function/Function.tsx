@@ -37,6 +37,7 @@ const Function: React.FC = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           margin: '0 auto',
+          paddingBottom: 20,
         }}
       >
         <RoundedInput

@@ -19,6 +19,7 @@ const Segment: React.FC<Props> = ({
       borderStyle: 'solid',
       borderColor: 'grayAlpha',
       borderRadius: '4px',
+      margin: 1,
       ...styles,
     }}
   >
@@ -29,6 +30,7 @@ const Segment: React.FC<Props> = ({
         fontSize: [20, 25, 25],
         padding: '0 15px 5px 15px',
         fontStyle: 'italic',
+        color: 'gray',
       }}
     >
       {title}
