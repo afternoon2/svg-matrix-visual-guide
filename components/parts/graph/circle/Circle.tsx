@@ -38,7 +38,7 @@ const Circle: React.FC<Props> = ({
         onMouseOut={handleMouseOut}
         onBlur={handleMouseOut}
       />
-      {hover && (
+      {(hover || isSelected) && (
         <g
           transform="translate(10, 10)"
         >
