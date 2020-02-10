@@ -7,11 +7,12 @@ interface Props {
   cy: number;
   name: string;
   isSelected: boolean;
+  isTranslated?: boolean;
   onClick?: (event: React.MouseEvent) => void;
 }
 
 const Circle: React.FC<Props> = ({
-  cx, cy, isSelected, onClick, name, id,
+  cx, cy, isSelected, isTranslated, onClick, name, id,
 }) => {
   const [hover, setHover] = React.useState<boolean>(false);
   const { theme } = useThemeUI();
@@ -66,7 +67,7 @@ const Circle: React.FC<Props> = ({
                   fontWeight: 600,
                 }}
               >
-                Current point:
+                {isTranslated ? 'New Current Point:' : 'Current point:'}
               </tspan>
             )}
             <tspan
