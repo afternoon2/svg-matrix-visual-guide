@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import { Flex } from 'theme-ui';
 
 const Overlay: React.FC = ({ children }) => (
-  <Box
+  <Flex
     sx={{
       backgroundColor: 'backgroundAlphaDark',
       width: '100%',
@@ -11,10 +11,12 @@ const Overlay: React.FC = ({ children }) => (
       top: 0,
       left: 0,
       zIndex: 11,
+      alignItems: 'center',
+      justifyContent: 'center',
     }}
   >
     {children}
-  </Box>
+  </Flex>
 );
 
 export default Overlay;

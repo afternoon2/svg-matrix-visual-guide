@@ -25,6 +25,15 @@ export default {
   },
   styles: {
     ...THEME.styles,
+    p: {
+      fontSize: 21,
+      fontFamily: 'body',
+      color: 'gray',
+    },
+    a: {
+      textDecoration: 'none',
+      color: 'primary',
+    },
   },
   breakpoints: [
     '1500px', '1800px', '1920px',

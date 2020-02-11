@@ -40,7 +40,7 @@ const Layout: React.FC = () => {
           zIndex: 2,
           width: `${TOOLBAR_WIDTH}px`,
           height: '100vh',
-          minHeight: '600px',
+          minHeight: '700px',
           overflowY: 'auto',
           flexDirection: 'column',
           justifyContent: 'flex-start',
