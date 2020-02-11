@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Heading, Link } from 'theme-ui';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
 
 const iconLinkProps: { [key: string]: any } = {
@@ -45,26 +45,21 @@ const Footer: React.FC = () => (
       pb={20}
     >
       <Link
-        href="https://github.com/afternoon2/svg-matrix-visual-guide"
-        variant="transition"
-        {...iconLinkProps}
-      >
-        <FontAwesomeIcon icon={faGithub} size="2x" />
-      </Link>
-      <Link
         variant="transition"
         {...iconLinkProps}
         href="https://jakub-antolak.dev"
+        title="Author's blog"
       >
-        <FontAwesomeIcon icon={faBlog} size="2x" />
+        <FontAwesomeIcon icon={faBlog} size="lg" />
       </Link>
       <Link
         href="https://twitter.com/jakub_antolak"
         variant="transition"
+        title="Author's Twitter"
         {...iconLinkProps}
         mr={0}
       >
-        <FontAwesomeIcon icon={faTwitter} size="2x" />
+        <FontAwesomeIcon icon={faTwitter} size="lg" />
       </Link>
     </Flex>
   </Flex>

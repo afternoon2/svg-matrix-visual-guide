@@ -9,11 +9,13 @@ import PointsState from '../components/states/points';
 import Layout from '../components/parts/layout';
 import FigureState from '../components/states/figure';
 import TranslationState from '../components/states/translation';
+import Octocat from '../components/common/octocat';
 
 const App: React.FC = () => (
   <>
     <FontFace />
     <ThemeProvider theme={theme}>
+      <Octocat />
       <MatrixState>
         <PointsState>
           <TranslationState>

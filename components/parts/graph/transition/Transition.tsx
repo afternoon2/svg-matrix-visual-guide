@@ -36,6 +36,7 @@ const Transition: React.FC = () => {
         strokeWidth={2}
         strokeDasharray="3"
         strokeDashoffset="1"
+        fill="none"
       />
       <Circle
         cx={firstStep.x}
@@ -50,6 +51,7 @@ const Transition: React.FC = () => {
         strokeWidth={2}
         strokeDasharray="3"
         strokeDashoffset="1"
+        fill="none"
       />
       <Circle
         cx={secondStep.x}
@@ -64,6 +66,7 @@ const Transition: React.FC = () => {
         strokeWidth={2}
         strokeDasharray="3"
         strokeDashoffset="1"
+        fill="none"
       />
     </g>
   );
