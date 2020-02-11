@@ -10,6 +10,7 @@ import Layout from '../components/parts/layout';
 import FigureState from '../components/states/figure';
 import TranslationState from '../components/states/translation';
 import Octocat from '../components/common/octocat';
+import TourState from '../components/states/tour/TourState';
 
 const App: React.FC = () => (
   <>
@@ -20,7 +21,9 @@ const App: React.FC = () => (
         <PointsState>
           <TranslationState>
             <FigureState>
-              <Layout />
+              <TourState>
+                <Layout />
+              </TourState>
             </FigureState>
           </TranslationState>
         </PointsState>

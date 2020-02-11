@@ -35,7 +35,7 @@ const MovedRectangle: React.FC = () => {
         width={width}
         height={height}
         transform={`matrix(${a} ${b} ${c} ${d} ${e} ${f})`}
-        fill={theme.colors.secondary}
+        fill={theme.colors.secondaryAlpha}
       />
       <Circle
         id="translatedTopLeft"
