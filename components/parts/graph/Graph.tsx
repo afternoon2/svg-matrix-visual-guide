@@ -3,6 +3,7 @@ import { Flex } from 'theme-ui';
 import Axis from './axis';
 import Rectangle from './rectangle';
 import MovedRectangle from './moved_rectangle';
+import Transition from './transition';
 
 const margin: { [key: string]: number } = {
   top: 30,
@@ -68,6 +69,7 @@ const Graph: React.FC = () => {
         <g
           transform={`translate(${margin.left}, ${margin.right})`}
         >
+          <Transition />
           <Rectangle />
           <MovedRectangle />
         </g>

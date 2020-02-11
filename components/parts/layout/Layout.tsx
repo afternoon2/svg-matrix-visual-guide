@@ -39,7 +39,7 @@ const Layout: React.FC = () => (
         minHeight: '600px',
         overflowY: 'auto',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         padding: 4,
       }}
     >

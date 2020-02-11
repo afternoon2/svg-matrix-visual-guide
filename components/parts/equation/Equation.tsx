@@ -6,6 +6,7 @@ import BracketPair from './bracket_pair';
 import Bond from './bond';
 import PointsContext from '../../../context/points/context';
 import { Vec2 } from '../../../context/points/types';
+import TranslationContext from '../../../context/translation/context';
 
 const Equation: React.FC = () => {
   const {
@@ -17,6 +18,9 @@ const Equation: React.FC = () => {
   const {
     state,
   } = React.useContext(PointsContext);
+  const {
+    state: translationState,
+  } = React.useContext(TranslationContext);
   const point: Vec2 = state[state.current];
   return (
     <Segment
@@ -74,9 +78,9 @@ const Equation: React.FC = () => {
         <BracketPair
           mode="result"
           modifierTop="x"
-          modifierTopValue={a * point.x + c * point.y + e}
+          modifierTopValue={translationState[state.current].x}
           modifierBottom="y"
-          modifierBottomValue={b * point.x + d * point.y + f}
+          modifierBottomValue={translationState[state.current].y}
         />
       </Flex>
     </Segment>

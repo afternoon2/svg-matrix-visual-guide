@@ -46,7 +46,7 @@ const Circle: React.FC<Props> = ({
             x={cx}
             y={cy}
             fill={theme.colors.backgroundLight}
-            width="150"
+            width="190"
             height={isSelected ? 115 : 95}
             stroke={theme.colors.tertiary}
           />

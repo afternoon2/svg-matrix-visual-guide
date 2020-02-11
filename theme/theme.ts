@@ -15,9 +15,11 @@ export default {
     grayAlpha: rgba('#a7a9be', 0.25),
     background: '#0f0e17',
     backgroundLight: setLightness(0.15, '#0f0e17'),
+    backgroundAlpha: rgba('#0f0e17', 0.25),
     primary: '#ff8906',
     secondary: '#f25f4c',
     tertiary: '#e53170',
+    tertiaryAlpha: rgba('#e53170', 0.5),
   },
   styles: {
     ...THEME.styles,

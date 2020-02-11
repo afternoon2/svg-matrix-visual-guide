@@ -68,7 +68,7 @@ const Rectangle: React.FC = () => {
     <>
       <rect
         {...commonRectProps}
-        fill={theme.colors.background}
+        fill={theme.colors.backgroundAlpha}
         stroke={theme.colors.primary}
         strokeWidth={2}
         style={{
