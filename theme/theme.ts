@@ -16,7 +16,7 @@ export default {
     background: '#0f0e17',
     backgroundLight: setLightness(0.15, '#0f0e17'),
     backgroundAlpha: rgba('#0f0e17', 0.25),
-    backgroundAlphaDark: rgba('#0f0e17', 0.75),
+    backgroundAlphaDark: rgba('#0f0e17', 0.35),
     primary: '#ff8906',
     secondary: '#f25f4c',
     secondaryAlpha: rgba('#f25f4c', 0.5),
@@ -34,6 +34,10 @@ export default {
       textDecoration: 'none',
       color: 'primary',
     },
+    ul: {
+      color: 'gray',
+      fontSize: 21,
+    }
   },
   breakpoints: [
     '1500px', '1800px', '1920px',
