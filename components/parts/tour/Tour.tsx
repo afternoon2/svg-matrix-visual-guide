@@ -7,6 +7,11 @@ import Equation from '../../../content/equation.mdx';
 import Graph from '../../../content/graph.mdx';
 import Summary from '../../../content/summary.mdx';
 
+interface TourStep {
+  target: string,
+  element: JSX.Element,
+}
+
 const steps: { [key: string]: JSX.Element } = {
   1: (
     <Step title="SVG Matrix Function">
@@ -44,7 +49,7 @@ const Tour: React.FC = () => {
 
   return (
     <>
-      {step ? steps[step] : <></>}
+      {step ? steps[step] : null}
     </>
   );
 };
