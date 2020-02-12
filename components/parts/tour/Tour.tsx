@@ -33,7 +33,7 @@ const steps: { [key: string]: JSX.Element } = {
     <Step title="Summary">
       <Summary />
     </Step>
-  )
+  ),
 };
 
 const Tour: React.FC = () => {
