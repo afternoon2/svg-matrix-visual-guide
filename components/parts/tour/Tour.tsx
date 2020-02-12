@@ -1,5 +1,4 @@
 import React from 'react';
-import Overlay from './overlay';
 import Step from './step/Step';
 import Intro from '../../../content/intro.mdx';
 import TourContext from '../../../context/tour/context';
@@ -44,9 +43,9 @@ const Tour: React.FC = () => {
   } = React.useContext(TourContext);
 
   return (
-    <Overlay>
-      {steps[step]}
-    </Overlay>
+    <>
+      {step ? steps[step] : <></>}
+    </>
   );
 };
 export default Tour;

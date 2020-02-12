@@ -48,14 +48,24 @@ const Step: React.FC<Props> = ({ title, children }) => {
 
   const { theme } = useThemeUI();
   return (
-    <OutsideClickHandler onOutsideClick={handleClose}>
+    <OutsideClickHandler
+      onOutsideClick={handleClose}
+      sx={{
+        position: 'absolute',
+        zIndex: 100,
+        top: '200px',
+        left: 'calc(50vw - 325px)',
+      }}
+    >
       <Flex
         sx={{
           flexDirection: 'column',
+          justifyContent: 'space-between',
           width: '650px',
+          height: '670px',
           padding: 4,
           boxSizing: 'border-box',
-          backgroundColor: 'backgroundLight',
+          backgroundColor: 'background',
           marginBottom: '20vh',
         }}
       >
@@ -64,16 +74,27 @@ const Step: React.FC<Props> = ({ title, children }) => {
             alignItems: 'center',
             justifyContent: 'space-between',
             width: '100%',
+            flexDirection: 'column',
           }}
         >
-          <Heading as="h1">
-            {title}
-          </Heading>
-          <Text as="span" onClick={handleClose} sx={{ cursor: 'pointer' }}>
-            <FontAwesomeIcon icon={faTimes} size="2x" color={theme.colors.gray} />
-          </Text>
+          <Flex sx={{ justifyContent: 'space-between', width: '100%' }}>
+            <Heading as="h1">
+              {title}
+            </Heading>
+            <Text as="span" onClick={handleClose} sx={{ cursor: 'pointer' }}>
+              <FontAwesomeIcon icon={faTimes} size="2x" color={theme.colors.gray} />
+            </Text>
+          </Flex>
+          <Flex
+            sx={{
+              flexDirection: 'column',
+              justifyContent: 'flex-start',
+              paddingTop: 20,
+            }}
+          >
+            {children}
+          </Flex>
         </Flex>
-        {children}
         <Flex
           sx={{
             alignItems: 'center',
