@@ -6,10 +6,11 @@ import Function from '../../../content/function.mdx';
 import Equation from '../../../content/equation.mdx';
 import Graph from '../../../content/graph.mdx';
 import Summary from '../../../content/summary.mdx';
+import Overlay from './overlay';
 
 interface TourStep {
-  target: string,
-  element: JSX.Element,
+  target: string;
+  element: JSX.Element;
 }
 
 const steps: { [key: string]: JSX.Element } = {
@@ -49,7 +50,11 @@ const Tour: React.FC = () => {
 
   return (
     <>
-      {step ? steps[step] : null}
+      {step ? (
+        <Overlay>
+          {steps[step]}
+        </Overlay>
+      ) : null}
     </>
   );
 };
