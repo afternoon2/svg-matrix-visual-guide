@@ -1,9 +1,13 @@
 import React, { MutableRefObject, createRef } from 'react';
-import { Flex } from 'theme-ui';
+import { Flex, useThemeUI } from 'theme-ui';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Axis from './axis';
 import Rectangle from './rectangle';
 import MovedRectangle from './moved_rectangle';
 import Transition from './transition';
+import TourContext from '../../../context/tour/context';
+
 
 const margin: { [key: string]: number } = {
   top: 30,
@@ -13,9 +17,13 @@ const margin: { [key: string]: number } = {
 };
 
 const Graph: React.FC = () => {
+  const {
+    dispatch,
+  } = React.useContext(TourContext);
   const [currentWidth, setCurrentWidth] = React.useState<number>(0);
   const [currentHeight, setCurrentHeight] = React.useState<number>(0);
   const ref: MutableRefObject<HTMLFieldSetElement> = createRef();
+  const { theme } = useThemeUI();
 
   const handleResize = React.useCallback(() => {
     if (ref.current) {
@@ -24,6 +32,17 @@ const Graph: React.FC = () => {
       setCurrentHeight(Math.round(height));
     }
   }, [ref, setCurrentWidth, setCurrentHeight]);
+
+  const handleIconClick = React.useCallback(() => {
+    dispatch({
+      type: 'setStep',
+      payload: 4,
+    });
+    dispatch({
+      type: 'toggle',
+      payload: true,
+    });
+  }, [dispatch]);
 
   React.useEffect(() => {
     if (currentHeight === 0 && currentWidth === 0) {
@@ -44,9 +63,23 @@ const Graph: React.FC = () => {
         alignItems: 'center',
         width: '100%',
         height: 'inherit',
+        position: 'relative',
       }}
       ref={ref}
     >
+      <FontAwesomeIcon
+        icon={faInfoCircle}
+        size="lg"
+        onClick={handleIconClick}
+        style={{
+          position: 'absolute',
+          bottom: 20,
+          right: 20,
+          zIndex: 10,
+          color: theme.colors.gray,
+          cursor: 'pointer',
+        }}
+      />
       <svg
         width="100%"
         height="100%"

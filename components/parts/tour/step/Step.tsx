@@ -54,19 +54,19 @@ const Step: React.FC<Props> = ({ title, children }) => {
         position: 'absolute',
         zIndex: 100,
         top: '200px',
-        left: 'calc(50vw - 325px)',
+        left: [0, 'calc(50vw - 325px)', 'calc(50vw - 325px)'],
       }}
     >
       <Flex
         sx={{
           flexDirection: 'column',
           justifyContent: 'space-between',
-          width: '650px',
-          height: '670px',
+          width: ['100vw', '650px', '650px'],
+          height: ['auto', '710px', '710px'],
           padding: 4,
           boxSizing: 'border-box',
           backgroundColor: 'background',
-          marginBottom: '20vh',
+          border: `1px solid ${theme.colors.gray}`,
         }}
       >
         <Flex

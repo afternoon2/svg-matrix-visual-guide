@@ -35,7 +35,7 @@ const steps: { [key: string]: JSX.Element } = {
     </Step>
   ),
   5: (
-    <Step title="Summary">
+    <Step title="Code & Point">
       <Summary />
     </Step>
   ),
