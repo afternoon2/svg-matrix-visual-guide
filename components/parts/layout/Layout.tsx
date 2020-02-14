@@ -5,7 +5,7 @@ import Code from '../code';
 import Footer from '../footer';
 import Function from '../function';
 import Equation from '../equation';
-import Graph from '../graph';
+import CoordSystem from '../coord_system';
 import Point from '../point';
 import Faq from '../faq';
 import Tour from '../tour/Tour';
@@ -30,7 +30,7 @@ const Layout: React.FC = () => {
           height: '100vh',
         }}
       >
-        <Graph />
+        <CoordSystem />
       </Flex>
       <Flex
         sx={{

@@ -4,7 +4,7 @@ import Intro from '../../../content/intro.mdx';
 import TourContext from '../../../context/tour/context';
 import Function from '../../../content/function.mdx';
 import Equation from '../../../content/equation.mdx';
-import Graph from '../../../content/graph.mdx';
+import CoordSystem from '../../../content/coord_system.mdx';
 import Summary from '../../../content/summary.mdx';
 import Overlay from './overlay';
 
@@ -30,8 +30,8 @@ const steps: { [key: string]: JSX.Element } = {
     </Step>
   ),
   4: (
-    <Step title="Graph">
-      <Graph />
+    <Step title="Coordinates System">
+      <CoordSystem />
     </Step>
   ),
   5: (

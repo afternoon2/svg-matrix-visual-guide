@@ -26,7 +26,7 @@ const Segment: React.FC<Props> = ({
       case 'Equation':
         newStep = 3;
         break;
-      case 'Graph':
+      case 'CoordSystem':
         newStep = 4;
         break;
       case 'Code':
@@ -78,7 +78,7 @@ const Segment: React.FC<Props> = ({
           <FontAwesomeIcon
             icon={faInfoCircle}
             size="xs"
-            style={{ marginLeft: '10px', cursor: 'pointer' }}
+            style={{ marginLeft: '10px', marginBottom: '5px', cursor: 'pointer' }}
             onClick={handleClick}
           />
         </Flex>

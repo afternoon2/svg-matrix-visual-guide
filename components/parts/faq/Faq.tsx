@@ -28,19 +28,18 @@ const Faq: React.FC = () => {
     >
       <Button
         sx={{
-          backgroundColor: 'tertiary',
+          backgroundColor: 'transparent',
           fontFamily: 'body',
           textDecoration: 'none',
           fontStyle: 'italic',
           fontSize: 22,
           cursor: 'pointer',
+          marginTop: 15,
+          textAlign: 'center',
         }}
         onClick={handleClick}
       >
-        What is going on here?&nbsp;&nbsp;
-        <span style={{ fontStyle: 'normal' }} role="img" aria-label="Thinking face emoji">
-          👀
-        </span>
+        What is going on here?
       </Button>
     </Flex>
   );

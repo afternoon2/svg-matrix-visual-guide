@@ -16,7 +16,7 @@ const margin: { [key: string]: number } = {
   bottom: 30,
 };
 
-const Graph: React.FC = () => {
+const CoordSystem: React.FC = () => {
   const {
     dispatch,
   } = React.useContext(TourContext);
@@ -56,7 +56,7 @@ const Graph: React.FC = () => {
 
   return (
     <Flex
-      id="graph"
+      id="coord_system"
       sx={{
         boxSizing: 'border-box',
         justifyContent: 'center',
@@ -111,4 +111,4 @@ const Graph: React.FC = () => {
   );
 };
 
-export default Graph;
+export default CoordSystem;
