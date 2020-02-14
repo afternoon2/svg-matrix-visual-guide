@@ -1,5 +1,6 @@
 import React from 'react';
 import { useThemeUI } from 'theme-ui';
+import { Spring } from 'react-spring/renderprops.cjs';
 
 interface Props {
   id: string;
@@ -39,65 +40,72 @@ const Circle: React.FC<Props> = ({
         onBlur={handleMouseOut}
       />
       {(hover || isSelected) && (
-        <g
-          transform="translate(10, 10)"
+        <Spring
+          from={{ x: 0, y: 0 }}
+          to={{ x: 10, y: 10 }}
         >
-          <rect
-            x={cx}
-            y={cy}
-            fill={theme.colors.backgroundLight}
-            opacity="1"
-            width="195"
-            height={isSelected ? 115 : 95}
-            stroke={theme.colors.tertiary}
-          />
-          <text
-            x={cx}
-            y={cy}
-            fill={theme.colors.text}
-            style={{
-              fontFamily: theme.fonts.monospace,
-            }}
-          >
-            {isSelected && (
-              <tspan
-                x={cx + 10}
-                dy="1.6em"
+          {(styles): JSX.Element => (
+            <g
+              transform={`translate(${styles.x}, ${styles.y})`}
+            >
+              <rect
+                x={cx}
+                y={cy}
+                fill={theme.colors.backgroundLight}
+                opacity="1"
+                width="195"
+                height={isSelected ? 115 : 95}
+                stroke={theme.colors.tertiary}
+              />
+              <text
+                x={cx}
+                y={cy}
+                fill={theme.colors.text}
                 style={{
-                  fontFamily: theme.fonts.body,
-                  fontWeight: 600,
+                  fontFamily: theme.fonts.monospace,
                 }}
               >
-                {isTranslated ? 'New Current Point:' : 'Current point:'}
-              </tspan>
-            )}
-            <tspan
-              x={cx + 10}
-              dy="1.6em"
-              style={{
-                fontFamily: theme.fonts.body,
-                fontStyle: 'italic',
-              }}
-            >
-              {name}
-            </tspan>
-            <tspan
-              x={cx + 10}
-              dy="1.6em"
-            >
-              x:&nbsp;
-              <tspan
-                fill={theme.colors.tertiary}
-              >
-                {cx}
-              </tspan>
-            </tspan>
-            <tspan x={cx + 10} dy="1.6em">
-              y:&nbsp;
-              <tspan fill={theme.colors.secondary}>{cy}</tspan>
-            </tspan>
-          </text>
-        </g>
+                {isSelected && (
+                  <tspan
+                    x={cx + 10}
+                    dy="1.6em"
+                    style={{
+                      fontFamily: theme.fonts.body,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {isTranslated ? 'New Current Point:' : 'Current point:'}
+                  </tspan>
+                )}
+                <tspan
+                  x={cx + 10}
+                  dy="1.6em"
+                  style={{
+                    fontFamily: theme.fonts.body,
+                    fontStyle: 'italic',
+                  }}
+                >
+                  {name}
+                </tspan>
+                <tspan
+                  x={cx + 10}
+                  dy="1.6em"
+                >
+                  x:&nbsp;
+                  <tspan
+                    fill={theme.colors.tertiary}
+                  >
+                    {cx}
+                  </tspan>
+                </tspan>
+                <tspan x={cx + 10} dy="1.6em">
+                  y:&nbsp;
+                  <tspan fill={theme.colors.secondary}>{cy}</tspan>
+                </tspan>
+              </text>
+            </g>
+          )}
+        </Spring>
       )}
     </>
   );

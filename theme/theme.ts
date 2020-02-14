@@ -37,7 +37,7 @@ export default {
     ul: {
       color: 'gray',
       fontSize: 21,
-    }
+    },
   },
   breakpoints: [
     '1500px', '1800px', '1920px',

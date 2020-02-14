@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Flex } from 'theme-ui';
+import { useSpring, animated } from 'react-spring';
+import { Flex } from 'theme-ui';
 import TourContext from '../../../context/tour/context';
 import Code from '../code';
 import Footer from '../footer';
@@ -12,13 +13,20 @@ import Tour from '../tour/Tour';
 
 const TOOLBAR_WIDTH = 700;
 
-const Layout: React.FC = () => {
+const Layout: React.FC = animated(() => {
   const { state: { open } } = React.useContext(TourContext);
+  const props = useSpring({
+    opacity: 1,
+    from: {
+      opacity: 0,
+    },
+  });
   return (
-    <Box
-      sx={{
+    <animated.div
+      style={{
         width: '100%',
         position: 'relative',
+        ...props,
       }}
     >
       <Flex
@@ -61,8 +69,8 @@ const Layout: React.FC = () => {
         </Flex>
       </Flex>
       {open && <Tour />}
-    </Box>
+    </animated.div>
   );
-};
+});
 
 export default Layout;
