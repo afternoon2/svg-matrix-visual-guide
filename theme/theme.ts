@@ -51,11 +51,34 @@ export default {
   fontSizes: [
     9, 14, 18, 24,
   ],
+  forms: {
+    input: {
+      borderColor: 'gray'
+    },
+    select: {
+      borderColor: 'gray'
+    }
+  },
   fontWeights: {
     body: 400,
     heading: 400,
     legend: 600,
     monospace: 400,
+  },
+  buttons: {
+    secondary: {
+      bg: 'background',
+      borderColor: 'primary',
+      color: 'primary',
+      borderWidth: '2px',
+      borderStyle: 'solid',
+      cursor: 'pointer',
+      '&:disabled': {
+        cursor: 'not-allowed',
+        borderColor: 'gray',
+        color: 'gray'
+      }
+    }
   },
   links: {
     transition: {

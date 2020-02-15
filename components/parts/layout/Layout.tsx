@@ -10,6 +10,7 @@ import CoordSystem from '../coord_system';
 import Point from '../point';
 import Faq from '../faq';
 import Tour from '../tour/Tour';
+import Transformation from '../transformation';
 
 const TOOLBAR_WIDTH = 700;
 
@@ -59,14 +60,9 @@ const Layout: React.FC = animated(() => {
         <Code />
         <Function />
         <Equation />
-        <Flex
-          sx={{
-            alignItems: 'center',
-          }}
-        >
-          <Point />
-          <Faq />
-        </Flex>
+        <Point />
+        <Transformation />
+        <Faq />
       </Flex>
       {open && <Tour />}
     </animated.div>

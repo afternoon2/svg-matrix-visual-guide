@@ -3,11 +3,8 @@ import { Flex, useThemeUI } from 'theme-ui';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Axis from './axis';
-import Rectangle from './rectangle';
-import MovedRectangle from './moved_rectangle';
-import Transition from './transition';
 import TourContext from '../../../context/tour/context';
-
+import Transformation from './transformation';
 
 const margin: { [key: string]: number } = {
   top: 30,
@@ -102,9 +99,7 @@ const CoordSystem: React.FC = () => {
         <g
           transform={`translate(${margin.left}, ${margin.right})`}
         >
-          <Transition />
-          <Rectangle />
-          <MovedRectangle />
+          <Transformation />
         </g>
       </svg>
     </Flex>

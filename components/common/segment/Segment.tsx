@@ -8,10 +8,11 @@ interface Props {
   id?: string;
   styles?: React.CSSProperties;
   title: string;
+  hideHelp?: boolean;
 }
 
 const Segment: React.FC<Props> = ({
-  id, children, title, styles,
+  id, children, title, styles, hideHelp,
 }) => {
   const {
     state: { step },
@@ -75,12 +76,14 @@ const Segment: React.FC<Props> = ({
           }}
         >
           {title}
-          <FontAwesomeIcon
-            icon={faInfoCircle}
-            size="xs"
-            style={{ marginLeft: '10px', marginBottom: '5px', cursor: 'pointer' }}
-            onClick={handleClick}
-          />
+          {!hideHelp && (
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              size="xs"
+              style={{ marginLeft: '10px', marginBottom: '5px', cursor: 'pointer' }}
+              onClick={handleClick}
+            />
+          )}
         </Flex>
       </Flex>
       {children}
