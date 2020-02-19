@@ -7,14 +7,19 @@ import TranslationContext from '../../../../context/translation/context';
 import TransformationContext from '../../../../context/transformation/context';
 
 const Trail: React.FC = () => {
-  const { state } = React.useContext(PointsContext);
+  const { 
+    state: {
+      topLeft, topRight,
+      bottomLeft, bottomRight,
+    }
+   } = React.useContext(PointsContext);
   const {
     state: {
       a, b, c, d,
     },
   } = React.useContext(MatrixContext);
   const {
-    state: transtate,
+    state: translate,
   } = React.useContext(TranslationContext);
   const { theme } = useThemeUI();
   const {
@@ -23,58 +28,58 @@ const Trail: React.FC = () => {
   const transitions: { [key: string]: any } = {
     1: {
       from: {
-        m: `${state.topLeft.x},${state.topLeft.y}`,
-        l1: `${state.topRight.x},${state.topRight.y}`,
-        l2: `${state.bottomRight.x},${state.bottomRight.y}`,
-        l3: `${state.bottomLeft.x},${state.bottomLeft.y}`,
+        m: `${topLeft.x},${topLeft.y}`,
+        l1: `${topRight.x},${topRight.y}`,
+        l2: `${bottomRight.x},${bottomRight.y}`,
+        l3: `${bottomLeft.x},${bottomLeft.y}`,
       },
       to: {
-        m: `${state.topLeft.x},${state.topLeft.y}`,
-        l1: `${state.topRight.x},${state.topRight.y}`,
-        l2: `${state.bottomRight.x},${state.bottomRight.y}`,
-        l3: `${state.bottomLeft.x},${state.bottomLeft.y}`,
+        m: `${topLeft.x},${topLeft.y}`,
+        l1: `${topRight.x},${topRight.y}`,
+        l2: `${bottomRight.x},${bottomRight.y}`,
+        l3: `${bottomLeft.x},${bottomLeft.y}`,
       },
     },
     2: {
       from: {
-        m: `${state.topLeft.x},${state.topLeft.y}`,
-        l1: `${state.topRight.x},${state.topRight.y}`,
-        l2: `${state.bottomRight.x},${state.bottomRight.y}`,
-        l3: `${state.bottomLeft.x},${state.bottomLeft.y}`,
+        m: `${topLeft.x},${topLeft.y}`,
+        l1: `${topRight.x},${topRight.y}`,
+        l2: `${bottomRight.x},${bottomRight.y}`,
+        l3: `${bottomLeft.x},${bottomLeft.y}`,
       },
       to: {
-        m: `${state.topLeft.x * a},${state.topLeft.x * b}`,
-        l1: `${state.topRight.x * a},${state.topRight.x * b}`,
-        l2: `${state.bottomRight.x * a},${state.bottomRight.x * b}`,
-        l3: `${state.bottomLeft.x * a},${state.bottomLeft.x * b}`,
+        m: `${topLeft.x * a},${topLeft.x * b}`,
+        l1: `${topRight.x * a},${topRight.x * b}`,
+        l2: `${bottomRight.x * a},${bottomRight.x * b}`,
+        l3: `${bottomLeft.x * a},${bottomLeft.x * b}`,
       },
     },
     3: {
       from: {
-        m: `${state.topLeft.x * a},${state.topLeft.x * b}`,
-        l1: `${state.topRight.x * a},${state.topRight.x * b}`,
-        l2: `${state.bottomRight.x * a},${state.bottomRight.x * b}`,
-        l3: `${state.bottomLeft.x * a},${state.bottomLeft.x * b}`,
+        m: `${topLeft.x * a},${topLeft.x * b}`,
+        l1: `${topRight.x * a},${topRight.x * b}`,
+        l2: `${bottomRight.x * a},${bottomRight.x * b}`,
+        l3: `${bottomLeft.x * a},${bottomLeft.x * b}`,
       },
       to: {
-        m: `${state.topLeft.x * a + state.topLeft.y * c},${state.topLeft.x * b + state.topLeft.y * d}`,
-        l1: `${state.topRight.x * a + state.topRight.y * c},${state.topRight.y * b + state.topRight.y * d}`,
-        l2: `${state.bottomRight.x * a + state.bottomRight.y * c},${state.bottomRight.y * b + state.bottomRight.y * d}`,
-        l3: `${state.bottomLeft.x * a + state.bottomLeft.y * c},${state.bottomLeft.y * b + state.bottomLeft.y * d}`,
+        m: `${topLeft.x * a + topLeft.y * c},${topLeft.x * b + topLeft.y * d}`,
+        l1: `${topRight.x * a + topRight.y * c},${topRight.y * b + topRight.y * d}`,
+        l2: `${bottomRight.x * a + bottomRight.y * c},${bottomRight.y * b + bottomRight.y * d}`,
+        l3: `${bottomLeft.x * a + bottomLeft.y * c},${bottomLeft.y * b + bottomLeft.y * d}`,
       },
     },
     4: {
       from: {
-        m: `${state.topLeft.x * a + state.topLeft.y * c},${state.topLeft.x * b + state.topLeft.y * d}`,
-        l1: `${state.topRight.x * a + state.topRight.y * c},${state.topRight.y * b + state.topRight.y * d}`,
-        l2: `${state.bottomRight.x * a + state.bottomRight.y * c},${state.bottomRight.y * b + state.bottomRight.y * d}`,
-        l3: `${state.bottomLeft.x * a + state.bottomLeft.y * c},${state.bottomLeft.y * b + state.bottomLeft.y * d}`,
+        m: `${topLeft.x * a + topLeft.y * c},${topLeft.x * b + topLeft.y * d}`,
+        l1: `${topRight.x * a + topRight.y * c},${topRight.y * b + topRight.y * d}`,
+        l2: `${bottomRight.x * a + bottomRight.y * c},${bottomRight.y * b + bottomRight.y * d}`,
+        l3: `${bottomLeft.x * a + bottomLeft.y * c},${bottomLeft.y * b + bottomLeft.y * d}`,
       },
       to: {
-        m: `${transtate.topLeft.x},${transtate.topLeft.y}`,
-        l1: `${transtate.topRight.x},${transtate.topRight.y}`,
-        l2: `${transtate.bottomRight.x},${transtate.bottomRight.y}`,
-        l3: `${transtate.bottomLeft.x},${transtate.bottomLeft.y}`,
+        m: `${translate.topLeft.x},${translate.topLeft.y}`,
+        l1: `${translate.topRight.x},${translate.topRight.y}`,
+        l2: `${translate.bottomRight.x},${translate.bottomRight.y}`,
+        l3: `${translate.bottomLeft.x},${translate.bottomLeft.y}`,
       },
     },
   };
