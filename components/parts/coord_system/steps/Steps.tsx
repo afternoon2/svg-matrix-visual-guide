@@ -6,13 +6,13 @@ import PointsContext from '../../../../context/points/context';
 import TranslationContext from '../../../../context/translation/context';
 import TransformationContext from '../../../../context/transformation/context';
 
-const Trail: React.FC = () => {
-  const { 
+const Steps: React.FC = () => {
+  const {
     state: {
       topLeft, topRight,
       bottomLeft, bottomRight,
-    }
-   } = React.useContext(PointsContext);
+    },
+  } = React.useContext(PointsContext);
   const {
     state: {
       a, b, c, d,
@@ -103,4 +103,4 @@ const Trail: React.FC = () => {
   );
 };
 
-export default Trail;
+export default Steps;

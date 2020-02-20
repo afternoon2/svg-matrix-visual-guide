@@ -26,7 +26,7 @@ const transformationReducer = (
         ...state,
         visible: !state.visible,
       };
-    case 'toggleTrail':
+    case 'toggleSteps':
       return {
         ...state,
         trail: !state.trail,

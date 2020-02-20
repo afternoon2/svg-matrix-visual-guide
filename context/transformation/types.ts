@@ -7,7 +7,7 @@ export interface TransformationState {
 }
 
 export interface TransformationAction {
-  type: 'increment' | 'decrement' | 'toggle' | 'toggleTrail';
+  type: 'increment' | 'decrement' | 'toggle' | 'toggleSteps';
 }
 
 export interface TransformationContextValue {

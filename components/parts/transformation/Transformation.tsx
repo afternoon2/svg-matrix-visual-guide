@@ -15,9 +15,9 @@ const Transformation: React.FC = () => {
       type: 'toggle',
     });
   }, [dispatch]);
-  const handleTrailChange = React.useCallback(() => {
+  const handleStepsChange = React.useCallback(() => {
     dispatch({
-      type: 'toggleTrail',
+      type: 'toggleSteps',
     });
   }, [dispatch]);
   return (
@@ -35,9 +35,9 @@ const Transformation: React.FC = () => {
         onChange={handleChange}
       />
       <TransformSwitch
-        label="Trail"
+        label="Steps"
         checked={trail}
-        onChange={handleTrailChange}
+        onChange={handleStepsChange}
       />
       <TransformSlider />
     </Segment>
