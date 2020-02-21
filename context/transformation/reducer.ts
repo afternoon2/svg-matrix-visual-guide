@@ -3,7 +3,7 @@ import { TransformationState, TransformationAction } from './types';
 export const initialTransformationState: TransformationState = {
   visible: true,
   step: 1,
-  trail: false,
+  trail: true,
 }
 
 const transformationReducer = (

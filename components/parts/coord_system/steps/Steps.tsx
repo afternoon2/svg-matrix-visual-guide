@@ -63,17 +63,17 @@ const Steps: React.FC = () => {
       },
       to: {
         m: `${topLeft.x * a + topLeft.y * c},${topLeft.x * b + topLeft.y * d}`,
-        l1: `${topRight.x * a + topRight.y * c},${topRight.y * b + topRight.y * d}`,
-        l2: `${bottomRight.x * a + bottomRight.y * c},${bottomRight.y * b + bottomRight.y * d}`,
-        l3: `${bottomLeft.x * a + bottomLeft.y * c},${bottomLeft.y * b + bottomLeft.y * d}`,
+        l1: `${topRight.x * a + topRight.y * c},${topRight.x * b + topRight.y * d}`,
+        l2: `${bottomRight.x * a + bottomRight.y * c},${bottomRight.x * b + bottomRight.y * d}`,
+        l3: `${bottomLeft.x * a + bottomLeft.y * c},${bottomLeft.x * b + bottomLeft.y * d}`,
       },
     },
     4: {
       from: {
         m: `${topLeft.x * a + topLeft.y * c},${topLeft.x * b + topLeft.y * d}`,
-        l1: `${topRight.x * a + topRight.y * c},${topRight.y * b + topRight.y * d}`,
-        l2: `${bottomRight.x * a + bottomRight.y * c},${bottomRight.y * b + bottomRight.y * d}`,
-        l3: `${bottomLeft.x * a + bottomLeft.y * c},${bottomLeft.y * b + bottomLeft.y * d}`,
+        l1: `${topRight.x * a + topRight.y * c},${topRight.x * b + topRight.y * d}`,
+        l2: `${bottomRight.x * a + bottomRight.y * c},${bottomRight.x * b + bottomRight.y * d}`,
+        l3: `${bottomLeft.x * a + bottomLeft.y * c},${bottomLeft.x * b + bottomLeft.y * d}`,
       },
       to: {
         m: `${translate.topLeft.x},${translate.topLeft.y}`,

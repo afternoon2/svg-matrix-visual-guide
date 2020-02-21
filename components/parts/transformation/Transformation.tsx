@@ -35,7 +35,7 @@ const Transformation: React.FC = () => {
         onChange={handleChange}
       />
       <TransformSwitch
-        label="Steps"
+        label="Trail"
         checked={trail}
         onChange={handleStepsChange}
       />
