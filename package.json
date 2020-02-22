@@ -26,6 +26,7 @@
     "dev": "next -p 8080",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "commit": "git-cz",
     "lint": "eslint -c .eslintrc.js pages/*.tsx components/**/*.tsx",
     "lint:fix": "eslint -c .eslintrc.js pages/*.tsx components/**/*.tsx --fix"
