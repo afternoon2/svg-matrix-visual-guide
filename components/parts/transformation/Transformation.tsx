@@ -29,14 +29,14 @@ const Transformation: React.FC = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
-        textAlign: 'center'
       }}
     >
       <Flex
         styles={{
           alignItems: 'center',
           justifyContent: 'space-around',
-          width: '100%'
+          width: '100%',
+          minWidth: '400px',
         }}
       >
         <TransformSwitch

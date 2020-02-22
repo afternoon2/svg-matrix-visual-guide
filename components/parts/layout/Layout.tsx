@@ -7,7 +7,6 @@ import Footer from '../footer';
 import Function from '../function';
 import Equation from '../equation';
 import CoordSystem from '../coord_system';
-import Point from '../point';
 import Faq from '../faq';
 import Tour from '../tour/Tour';
 import Transformation from '../transformation';
@@ -60,7 +59,6 @@ const Layout: React.FC = animated(() => {
         <Code />
         <Function />
         <Equation />
-        <Point />
         <Transformation />
         <Faq />
       </Flex>
