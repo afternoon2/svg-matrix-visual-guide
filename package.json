@@ -28,6 +28,7 @@
     "start": "next start",
     "export": "next export",
     "commit": "git-cz",
+    "deploy": "yarn build && yarn export",
     "lint": "eslint -c .eslintrc.js pages/*.tsx components/**/*.tsx",
     "lint:fix": "eslint -c .eslintrc.js pages/*.tsx components/**/*.tsx --fix"
   },
