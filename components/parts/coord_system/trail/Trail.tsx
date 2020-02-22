@@ -27,7 +27,7 @@ const Step: React.FC<StepProps> = ({ color, point, step }) => {
       step1, step2, step3, step4,
     };
     return steps[`step${step}`];
-  }, [step, point]);
+  }, [step, point, a, b, c, d, e, f]);
   return (
     <path
       fill="none"
