@@ -32,11 +32,10 @@ const Transformation: React.FC = () => {
       }}
     >
       <Flex
-        styles={{
+        sx={{
           alignItems: 'center',
           justifyContent: 'space-around',
           width: '100%',
-          minWidth: '400px',
         }}
       >
         <TransformSwitch
