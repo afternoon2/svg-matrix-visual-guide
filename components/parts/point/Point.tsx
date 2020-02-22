@@ -62,7 +62,9 @@ const Point: React.FC = () => {
         onChange={handleChange}
         sx={{
           minWidth: '200px',
+          maxWidth: '230px',
           backgroundColor: 'background',
+          margin: '0 auto'
         }}
       >
         {points.map((p: SelectItem) => (

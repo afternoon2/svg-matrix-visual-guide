@@ -1,4 +1,5 @@
 import React from 'react';
+import { Flex } from 'theme-ui';
 import Segment from '../../common/segment';
 import TransformationContext from '../../../context/transformation/context';
 import TransformSlider from '../transform_slider';
@@ -27,19 +28,29 @@ const Transformation: React.FC = () => {
       styles={{
         alignItems: 'center',
         justifyContent: 'space-between',
+        width: '100%',
+        textAlign: 'center'
       }}
     >
-      <TransformSwitch
-        label="Show"
-        checked={visible}
-        onChange={handleChange}
-      />
-      <TransformSwitch
-        label="Trail"
-        checked={trail}
-        onChange={handleStepsChange}
-      />
-      <TransformSlider />
+      <Flex
+        styles={{
+          alignItems: 'center',
+          justifyContent: 'space-around',
+          width: '100%'
+        }}
+      >
+        <TransformSwitch
+          label="Show"
+          checked={visible}
+          onChange={handleChange}
+        />
+        <TransformSwitch
+          label="Trail"
+          checked={trail}
+          onChange={handleStepsChange}
+        />
+        <TransformSlider />
+      </Flex>
     </Segment>
   );
 };
